@@ -1,0 +1,111 @@
+<style>
+    /* CSS for footer */
+  @font-face {
+      font-family: Iciel;
+      src: url(Assets/Fonts/Iciel.ttf);
+  }
+  
+  @font-face {
+      font-family: Oswald;
+      src: url(Assets/Fonts/Oswald.ttf);
+  }
+  
+  body{
+      line-height: 1.5;
+      font-family: 'Oswald', sans-serif;
+  }
+  .footer-container{
+      max-width: 1170px;
+      margin:auto;
+  }
+  .footer-row{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  .footer{
+      background-color: #292929;
+      padding: 70px 0;
+      color: white;
+  }
+  .footer a{
+      color:white;
+      text-decoration:underline;
+  }
+  .footer-col{
+     width: 45%;
+     padding: 0 15px;
+     margin-top: 50px;
+  }
+  .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+      font-family: Iciel;
+      text-transform: uppercase;
+  }
+  .footer-col p{
+      text-align: justify;
+      font-size: 16px;
+      font-family: Oswald;
+  }
+  .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+  }
+  .footer-copyright{
+      text-align: center;
+      font-size: 18px;
+      margin-top: 70px;
+      margin-bottom: 0px;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  </style>
+  <footer class="footer">
+      <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                     <h4>Chúng tôi là ai</h4>
+                     <p>Lang Thang là một dự án phi lợi nhuận được thành lập vào đầu năm 2022 nhằm phát triển văn hóa đọc, hướng tới mục tiêu giáo dục bền vững của Liên Hiệp Quốc</p></div>
+                <div class="footer-col">
+                     <h4>contact us</h4>
+                     Fanpage: <a href="https://www.facebook.com/langthangproject/">LANG THANG 2022</a> 
+                     <br>
+                     Instagram: <a href="https://www.instagram.com/langthang.prj/">langthang.prj</a>
+                     <br>
+                     Email: langthang.project2022@gmail.com
+                     <br> <br>
+                     Nguyễn Hữu Phước: 0332846940 (Founder/ Trưởng ban Tổ chức)
+                     <br>
+                     Phạm An Khanh: 0708205506 (Co-Founder/ Phó ban Tổ chức)
+                     
+            </div>
+          </div>
+        </div>
+      <div class="footer-copyright">
+          ©2022 LANG THANG. All rights reserved. <br>Proudly created by <a href="https://www.facebook.com/The-itHelp-Project-111001754810585/">The itHelp Project</a>
+      </div>
+    </footer>
+  
+    <script src="main.js"> </script>
