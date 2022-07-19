@@ -1,0 +1,359 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Template</title>
+    <style>
+        @font-face {
+    font-family: Iciel;
+    src: url(Assets/Fonts/Iciel.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header-container{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background-color: white;
+}
+
+/* Navbar */
+.navbar{
+    position: absolute;
+    width: 100vw;
+    height: 40px;
+    margin: auto;
+    padding: 35px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+
+    animation: Navbar_Transition 0.6s ease-in-out;
+}
+.black{
+    background-color: rgb(41, 40, 40);
+    width: 100vw;
+    height: 40px;
+
+    animation: Navbar_Transition 0.6s ease-in-out;
+}
+.black a .Logo{
+    transform: translateX(60px);
+}
+.navbar a .Logo{
+    transform: translateX(60px);
+}
+.Logo{
+    height: 13vh;
+    z-index: 5;
+}
+.navbar ul.PC_navbar li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 40px;
+    position: relative;
+}
+.navbar ul.PC_navbar li a{
+    font-family: Iciel;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(41, 40, 40);
+}
+.black ul.PC_navbar li a{
+    color: white;
+}
+ul.PC_navbar{
+    transform: translateX(-60px);
+}
+
+.navbar ul.PC_navbar li::after{
+    content: "";
+    align-items: center;
+    height: 3.5px;
+    bottom: -8px;
+    left: 0;
+    /* Cái này set cho animation */
+    width: 0;
+    background-color: transparent;
+    position: absolute;
+    transition: 0.25s;
+}
+
+/* Hamburger */
+.burger_container{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger{
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.35s ease-in-out;
+}
+
+.burger::before, .burger::after{
+    content: "";
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.35s ease-in-out;
+}
+
+.burger::before{
+    transform: translateY(-8px);
+}
+
+.burger::after{
+    transform: translateY(8px);
+}
+
+.burger_container.open .burger{
+    transform: translateX(-20px);
+    background-color: transparent;
+}
+
+.burger_container.open .burger::before{
+    transform: rotate(45deg) translate(20px, -19.5px);
+}
+
+.burger_container.open .burger::after{
+    transform: rotate(-45deg) translate(20px, 19.5px);
+}
+
+.burger_menu{
+    position: absolute;
+    width: 100vw;
+    background-color: transparent;
+
+    /* Chỉnh dựa trên height của .Logo với 1/2 height của burger_menu */
+    transform: translateX(0) translateY(170px);
+    transition: all ease-in-out .5s;
+}
+
+.burger_menu ul.mobile_navbar a li{
+    text-align: center;
+    list-style: none;
+    display: none;
+    padding: 10px;
+}
+
+.burger_menu ul.mobile_navbar a{
+    font-family: Iciel;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: transparent;
+    transition: all 0.15s ease-in-out;
+}
+
+.burger_menu.open{
+    display: block;
+    background-color: rgb(41, 40, 40);
+    transform: translateY(150px);
+    transition: all 0.5s ease-in-out;
+}
+
+.burger_menu.open ul.mobile_navbar a li{
+    color: white;
+    transition: all 0.15s ease-in-out;
+    display: block;
+}
+
+.burger_menu.open ul.mobile_navbar a li:hover{
+    color: rgb(164, 223, 250);
+}
+
+@keyframes Navbar_Transition {
+    0%{
+        transform: translateY(40px);
+        color: transparent;
+        height: 50px;
+    }
+    100%{
+        transform: translateY(0%);
+        height: 40px;
+    }
+}
+
+/* Khi media lớn như pc */
+@media screen and (min-width: 801px) {
+    .burger_container{
+        display: none;
+    }
+    .navbar ul.PC_navbar li a {
+        font-size: 20px;
+    }
+    .navbar ul.PC_navbar li:hover::after{
+        width: 100%;
+        background-color: rgb(255, 114, 114);
+    }
+    .navbar ul.PC_navbar li a:hover{
+        color: rgb(93, 162, 219);
+    }
+    .black ul.PC_navbar li a:hover{
+        color: rgb(167, 212, 247);
+    }
+    .burger_menu{
+        display: none;
+    }
+  }
+/* Chỉnh cỡ  navbar cho phù hợp  */
+  @media screen and (max-width: 1280px) {
+    .navbar ul.PC_navbar li a {
+        font-size: 15px;
+      }
+    .navbar ul.PC_navbar li::after{
+        height: 4px;
+    }
+  }
+
+  @media screen and (max-width: 1120px) {
+    .navbar ul.PC_navbar li a {
+        font-size: 17px;
+    }
+    .navbar ul.PC_navbar li {
+        margin: 0 26px;
+    }
+      .navbar ul.PC_navbar li::after{
+        height: 3.3px;
+    }
+  }
+
+  @media screen and (max-width: 1002px) {
+    .navbar ul.PC_navbar li a {
+        font-size: 16px;
+    }
+    .navbar ul.PC_navbar li {
+        margin: 0 23px;
+    }
+      .navbar ul.PC_navbar li::after{
+        height: 3.1px;
+    }
+  }
+
+  @media screen and (max-width: 948px) {
+    .navbar ul.PC_navbar li a {
+        font-size: 15px;
+    }
+    .navbar ul.PC_navbar li {
+        margin: 0 19px;
+    }
+      .navbar ul.PC_navbar li::after{
+        height: 3.1px;
+    }
+  }
+
+  @media screen and (max-width: 962px) {
+    .navbar ul.PC_navbar li a {
+        font-size: 16px;
+    }
+    .navbar ul.PC_navbar li {
+        margin: 0 17px;
+    }
+      .navbar ul.PC_navbar li::after{
+        height: 3.1px;
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    .navbar ul.PC_navbar li a {
+        font-size: 14px;
+    }
+    .navbar ul.PC_navbar li {
+        margin: 0 17px;
+    }
+      .navbar ul.PC_navbar li::after{
+        height: 3.1px;
+    }
+  }
+
+/* Khi media nhỏ cỡ mobile */
+  @media screen and (max-width: 800px) {
+    @keyframes Navbar_Transition {
+        0%{
+            transform: translateY(40px);
+            color: transparent;
+            height: 50px;
+        }
+        100%{
+            transform: translateY(0);
+            height: 1vh;
+        }
+    }
+    .navbar ul.PC_navbar li a, .navbar ul.PC_navbar li::after {
+        display: none;
+    }
+    .Logo{
+        width: 60px;
+        height: auto;
+        margin-left: 25px;
+    }
+    .navbar{
+        background-color: rgb(41, 40, 40);
+        height: 1vh;
+        width: 100vw;
+    }
+    .black a .Logo{
+        transform: translateX(0px);
+    }
+    .navbar a .Logo{
+        transform: translateX(0px);
+    }
+  }
+
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="navbar black">
+            <!-- Xài đỡ do chưa có logo trắng -->
+            <a href="index.html"><img src="Assets/Images/LogoTrans.png" alt="Logo" class="Logo"></a>
+            
+            <ul class="PC_navbar">
+                <li><a href="index.html"> Home</a></li>
+                <li><a href="aboutus.html"> About us</a></li>
+                <li><a href="posts/index.html"> Blog</a></li>
+                <li><a href="events.html"> Events</a></li>
+                <li><a href="volunteer.html"> Volunteer</a></li>
+                <li><a href="funding.html"> Gây quỹ</a></li>
+            </ul>
+            <div class="burger_container">
+                <div class="burger"></div>
+            </div>
+            <div class="burger_menu">
+                <ul class="mobile_navbar">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="aboutus.html"><li>About us</li></a>
+                    <a href="posts/index.html"><li> Blog</li></a>
+                    <a href="events.html"><li>Events</li></a>
+                    <a href="volunteer.html"><li>Volunteer</li></a>
+                    <a href="funding.html"><li>Gây quỹ</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="header.js"></script>
+</body>
+</html>

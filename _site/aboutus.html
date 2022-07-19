@@ -1,0 +1,1713 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latibule of the Heart</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    </script>
+    <script> 
+        $(function(){
+        $("#header").load("headerBlack.html"); 
+        $("#footer").load("footer.html"); 
+        });
+    </script> 
+    <link rel="icon" href="Assets/Images/LogoTrans.png">
+    <style>
+@font-face {
+    font-family: Iciel;
+    src: url(Assets/Fonts/Iciel.ttf);
+}
+
+@font-face {
+    font-family: Briko;
+    src: url(Assets/Fonts/Briko.ttf);
+}
+
+@font-face {
+    font-family: Spectral;
+    src: url(Assets/Fonts/Spectral.ttf);
+}
+
+@font-face {
+    font-family: Napoli;
+    src: url(Assets/Fonts/Napoli.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(Assets/Fonts/Roboto.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.home{
+    width: 100vw; 
+    height: 100vh;
+    transform: translateZ(0);
+    overflow: hidden;
+    position: relative;
+}
+
+.backgroundcover{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    background: linear-gradient(rgba(10, 0, 0, 0.75), 
+    rgba(0, 10, 0, 0.75));
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.parallax1{
+    position: fixed;
+    float: right;
+    margin: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Title */
+.title{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+@keyframes Header_Transition {
+    0%{
+        transform: translateY(40px);
+        color: transparent;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.title h1{
+    font-family: Briko;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+
+    animation: Header_Transition 0.6s ease-out;
+}
+
+@keyframes Description_Transition {
+    0%{
+        transform: translateY(60px);
+        color: transparent;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.title p{
+    font-family: Iciel;
+    text-transform: uppercase;
+    margin: 0 2.5vw;
+    padding: 0;
+    color: rgb(249, 146, 146);
+
+    animation: Description_Transition 1s ease-out;
+}
+
+.title div a button{
+    color: white;
+    font-size: 1.5rem;
+    width: 190px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 20 25px;
+    padding: 0;
+    border: 3px solid rgb(255, 96, 96);
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    font-family: Iciel;
+    text-transform: uppercase;
+
+    animation: Button_Transition 1s ease-out;
+}
+
+.title div a button:hover{
+    border: transparent;
+    color: rgb(15, 15, 15);
+}
+
+.title2{
+    color: rgb(73, 66, 66);
+}
+/* Mission */
+.mission{
+    height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.mission::after{
+    content: "";
+    align-items: center;
+    left: 0;
+    bottom: -70px;
+    height: 3px;
+    border-radius: 2px;
+    width: 35vw;
+
+    /* (100 - width)/2 */
+    transform: translateX(32.5vw);
+
+    background-color: rgba(69, 65, 65, 0.2);
+    position: absolute;
+}
+
+.mission img{
+    width: 29.8vw;
+    position: relative;
+}
+
+.mission .deco{
+    content: "";
+    align-items: center;
+    width: 25.4vw;
+    height: 25.4vw;
+    left: 112px;
+    bottom: 28px;
+    background: linear-gradient(rgb(255, 96, 96), rgb(191, 134, 195));
+    position: absolute;
+}
+
+.mission .img_container{
+    position: absolute;
+    margin-left: 60vw;
+}
+
+.mission .title2{
+    position: absolute;
+    transform: translateY(15vh);
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: right;
+    padding: 10px;
+    width: 50.5vw;
+}
+
+.mission .title2 p{
+    position: absolute;
+    margin-top: 20px;
+    font-family: Vollkorn;
+}
+
+.mission .title2 h1{
+    font-family: Iciel;
+    padding-bottom: 20px;
+}
+
+.mission .title2 h1::after{
+    content: "";
+    align-items: center;
+    float: right;
+    right: 10px;
+    bottom: 20px;
+    height: 3.3px;
+    border-radius: 2px;
+    width: 100px;
+    background-color: rgb(255, 96, 96);
+    position: absolute;
+}
+
+/* Vision */
+.vision{
+    height: 70vh;
+    position: relative;
+    margin-top: 100px;
+}
+
+.vision::after{
+    content: "";
+    align-items: center;
+    left: 0;
+    bottom: -70px;
+    height: 3px;
+    border-radius: 2px;
+    width: 35vw;
+
+    /* (100 - width)/2 */
+    transform: translateX(32.5vw);
+
+    background-color: rgba(69, 65, 65, 0.2);
+    position: absolute;
+}
+
+.vision img{
+    width: 29.8vw;
+    position: relative;
+}
+
+.vision .deco{
+    content: "";
+    align-items: center;
+    width: 25.4vw;
+    height: 25.4vw;
+    right: 110px;
+    bottom: 42px;
+    background: linear-gradient(rgb(191, 134, 195), rgb(255, 96, 96));
+    position: absolute;
+}
+
+.vision .img_container{
+    position: absolute;
+    margin-left: 10vw;
+}
+
+.vision .title2{
+    position: relative;
+    transform: translateY(23vh);
+    margin-right: 3vw;
+    margin-left: 45vw;
+    text-align: left;
+    padding: 10px;
+    width: 50vw;
+}
+
+.vision .title2 p{
+    position: absolute;
+    margin-top: 30px;
+    font-family: Vollkorn;
+}
+
+.vision .title2 h1{
+    font-family: Iciel;
+    padding-bottom: 20px;
+}
+
+.vision .title2 h1::after{
+    content: "";
+    align-items: center;
+    float: left;
+    left: 13px;
+    bottom: 20px;
+    height: 3.3px;
+    border-radius: 2px;
+    width: 100px;
+    background-color: rgb(255, 96, 96);
+    position: absolute;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.reveal.active{
+    transform: translateY(90px);
+    opacity: 1;
+}
+
+/* Goal */
+.goal{
+    height: auto;
+    margin-top: 180px;
+    position: relative;
+}
+
+.goal::after{
+    content: "";
+    align-items: center;
+    left: 0;
+    bottom: -130px;
+    height: 3px;
+    border-radius: 2px;
+    width: 35vw;
+
+    /* (100 - width)/2 */
+    transform: translateX(32.5vw);
+
+    background-color: rgba(69, 65, 65, 0.2);
+    position: absolute;
+}
+
+.goal h1{
+    color: rgb(73, 66, 66);
+}
+
+.goal p{
+    color: rgb(73, 66, 66);
+} 
+
+.goal > h1{
+    font-family: Iciel;
+    text-align: center;
+    margin-bottom: 120px;
+    text-transform: uppercase;
+}
+
+.goal > h1::after{
+    content: "";
+    align-items: center;
+    top: 90px;
+    height: 3.8px;
+    border-radius: 2px;
+    width: 150px;
+    background-color: rgb(255, 96, 96);
+    position: absolute;
+    transform: translateX(-190px);
+}
+
+.sub_goal img{
+    width: 130px;
+    transition:  0.35s all ease-in-out;
+}
+
+.sub_goal p{
+    display: none;
+    font-family: Spectral;
+    position: relative;
+    width: 20vw;
+    text-align: justify;
+    opacity: 0;
+    color: white;
+    transform: translateY(150px);
+    transition: 0.55s all ease-in-out;
+}
+
+.sub_goal h1{
+    font-family: Iciel;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(73, 66, 66);
+    text-transform: uppercase;
+    transform: translateY(30px);
+    /* transition: 0.25s all ease-in-out; */
+}
+
+.sub_goal {
+    /* Width của p */
+    width: 20vw;
+    height: 250px;
+
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    border: 2px rgb(52, 51, 51) solid;
+    border-radius: 5px;
+    cursor: default;
+    transition: 0.35s all ease-in-out;
+}
+
+.sub_goal:hover{
+    background-color: rgb(41, 40, 40);
+    transform: translateY(-12px);
+}
+
+.sub_goal:hover img{
+    width: 90px;
+}
+
+.sub_goal:hover h1{
+    color: rgb(255, 228, 228);
+    transform: translateY(0);
+}
+
+.sub_goal:hover p{
+    display: block;
+    color: white;
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+.goal_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.sub_goal img{
+    margin-bottom: 20px;
+}
+
+/* Button */
+.BtnContainer{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.goal a button{
+    color: rgb(255, 106, 106);
+    font-size: 2rem;
+    width: 250px;
+    height: 90px;
+    border-radius: 60px;
+    margin: 0 30px;
+    padding: 0;
+    border: 3px solid rgb(48, 44, 44);
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    font-family: Iciel;
+    text-transform: uppercase;
+
+    animation: Button_Transition 1s ease-out;
+}
+/* Format span hiệu ứng của button */
+.BtnContainer button span{
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    background-color: rgb(255, 96, 96);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+.goal a button:hover{
+    border: transparent;
+    color: rgb(15, 15, 15);
+}
+
+.BtnContainer button:hover span{
+    width: 100%;
+    border: 3px solid rgb(255, 106, 106);
+}
+
+/* Value */
+.value{
+    height: 100%;
+    margin-top: 250px;
+    position: relative;
+}
+
+.value::after{
+    content: "";
+    align-items: center;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    border-radius: 2px;
+    width: 35vw;
+
+    /* (100 - width)/2 */
+    transform: translateX(32.5vw);
+
+    background-color: rgba(69, 65, 65, 0.2);
+    position: absolute;
+}
+
+.value h1{
+    color: rgb(73, 66, 66);
+}
+
+.value p{
+    color: rgb(73, 66, 66);
+} 
+
+.value > h1{
+    font-family: Iciel;
+    text-align: center;
+    margin-bottom: 120px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.value > h1::after{
+    content: "";
+    align-items: center;
+    top: 90px;
+    height: 3.8px;
+    border-radius: 2px;
+    width: 150px;
+    background-color: rgb(255, 96, 96);
+    position: absolute;
+    transform: translateX(-270px);
+}
+
+.sub_value p{
+    display: block;
+    font-family: Spectral;
+    position: relative;
+    width: 20vw;
+    text-align: justify;
+    opacity: 0;
+    color: white;
+    transform: translateY(100px);
+    margin-bottom: 50px;
+    transition: 0.55s all ease-in-out;
+}
+
+.sub_value h1{
+    display: inline-block;
+    font-family: Iciel;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    transform: translateY(120px);
+    transition: 0.4s all ease-in-out;
+}
+
+.sub_value {
+    /* Width của p */
+    width: 20vw;
+    height: 250px;
+
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    border: 2px rgb(52, 51, 51) solid;
+    border-radius: 5px;
+    cursor: default;
+    overflow: hidden;
+    transition: 0.35s all ease-in-out;
+}
+
+.sub_value:hover{
+    transform: translateY(-10px);
+}
+
+.sub_value:hover img{
+    width: 90px;
+}
+
+.sub_value:hover p{
+    display: inline-block;
+    color: white;
+    opacity: 1;
+    transform: translateY(50px);
+}
+
+.sub_value:hover h1{
+    color: rgb(250, 197, 197);
+    transform: translateY(50px);
+}
+
+.value_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.sub_value:nth-child(1){
+    background: linear-gradient(rgba(10, 0, 0, 0.3), 
+    rgba(0, 10, 0, 0.9)), url(Assets/Images/Value1.jpg);
+    background-size: cover;
+}
+
+.sub_value:nth-child(2){
+    background: linear-gradient(rgba(10, 0, 0, 0.3), 
+    rgba(0, 10, 0, 0.9)), url(Assets/Images/Value2.jpg);
+    background-size: cover;
+}
+
+.sub_value:nth-child(3){
+    background: linear-gradient(rgba(10, 0, 0, 0.3), 
+    rgba(0, 10, 0, 0.9)), url(Assets/Images/Value3.jpg);
+    background-size: cover;
+}
+
+.sub_value:nth-child(4){
+    background: linear-gradient(rgba(10, 0, 0, 0.3), 
+    rgba(0, 10, 0, 0.9)), url(Assets/Images/Value4.jpg);
+    background-size: cover;
+}
+
+/* Team */
+.team{
+    margin-top: 100px;
+    height: 50vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+
+.team::after{
+    content: "";
+    align-items: center;
+    left: 0;
+    bottom: -50px;
+    height: 3px;
+    border-radius: 2px;
+    width: 35vw;
+
+    /* (100 - width)/2 */
+    transform: translateX(32.5vw);
+
+    background-color: rgba(69, 65, 65, 0.2);
+    position: absolute;
+}
+
+.team h1{
+    color:rgb(63, 61, 61);
+}
+
+.team p{
+    color:rgb(68, 64, 64);
+}
+
+.team > img{
+    height: 25vw;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.team_container > h1{
+    font-family: Iciel;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.team_container > h1::after{
+    content: "";
+    align-items: center;
+    bottom: -20px;
+    left: 0;
+    height: 3.8px;
+    border-radius: 2px;
+    width: 200px;
+    background-color: rgb(255, 96, 96);
+    position: absolute;
+}
+
+.sub_team{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin: 15px 0;
+    cursor: default;
+}
+
+.sub_team h1{
+    width: 5vw;
+    margin-left: 30px;
+    margin-right: 15px;
+    text-align: left;
+    font-family: Napoli;
+    z-index: 1;
+    margin-bottom: 10px;
+    position: relative;
+    transition: 0.35s all ease-in-out;
+}
+
+.sub_team h1::after{
+    content: "";
+    align-items: center;
+    height: 3.5px;
+    width: 0px;
+    bottom: -8px;
+    left: 0;
+    position: absolute;
+    background-color: rgba(255, 118, 118, 0.529);
+    transition: 0.35s all ease-in-out;
+}
+
+.sub_team:hover h1{
+    transform: scale(1.04);
+}
+
+.sub_team:hover h1::after{
+    width: 3.4vw;
+}
+
+.sub_team p{
+    font-family: Roboto;
+}
+
+.sub_team img{
+    width: 70px;
+}
+
+.sub_team p{
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: .35s all ease-in-out;
+    z-index: -1;
+}
+
+.sub_team:hover p{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.team > img{
+    height: 23vw;
+}
+.sub_team img{
+    width: 5vw;
+}
+
+@media screen and (min-width: 801px) {
+    .title h1{
+        font-size: 200px;
+    }
+    .title p{
+        font-size: 28px;
+        margin-bottom: 17px;
+    }
+
+    .parallax1{
+        position: absolute;
+        margin: 0;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    .mission .title2 h1{
+        font-size: 50px;
+    }
+    .vision .title2 h1{
+        font-size: 50px;
+    }
+    .mission .title2 p{
+        font-size: 25px;
+    }
+    .vision .title2 p{
+        font-size: 25px;
+    }
+    .goal > h1 {
+        font-size: 50px;
+    }
+    .value > h1 {
+        font-size: 50px;
+    }
+    .team_container > h1{
+        font-size: 40px;
+    }
+    .team_container p{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .team_container p{
+        font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    .mission .title2 h1{
+        font-size: 50px;
+    }
+    .vision .title2 h1{
+        font-size: 50px;
+    }
+    .mission .title2 p{
+        font-size: 20px;
+    }
+    .vision .title2 p{
+        font-size: 20px;
+    }
+    .team_container > h1{
+        font-size: 20px;
+    }
+    .team_container p{
+        font-size: 13.2px;
+    }
+    .sub_team h1{
+        margin-right: 15px;
+    }
+    .sub_value h1{
+        width: 90%;
+    }
+  }
+  @media screen and (max-width: 1350px) {
+    .mission .title2 h1{
+        font-size: 50px;
+    }
+    .vision .title2 h1{
+        font-size: 50px;
+    }
+    .mission .title2 p{
+        font-size: 18px;
+    }
+    .vision .title2 p{
+        font-size: 18px;
+    }
+    .team_container > h1{
+        font-size: 28px;
+    }
+    .team_container p{
+        font-size: 14.5px;
+    }
+
+    .sub_value{
+        height: 280px;
+    }
+    .sub_goal{
+        height: 260px;
+    }
+    .sub_goal p{
+        font-size: 13.5px;
+    }
+  }
+  @media screen and (max-width: 1022px) {
+    .team_container > h1{
+        font-size: 26px;
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    .mission .title2 p{
+        font-size: 17px;
+    }
+    .mission .deco{
+        left: 60px;
+        bottom: 20px;
+    }
+    .vision .deco{
+        right: 60px;
+        bottom: 30px;
+    }
+  }
+  @media screen and (max-width: 1008px) {
+    .mission .title2 p{
+        font-size: 18px;
+    }
+    .vision .title2 p{
+        font-size: 18px;
+    }
+    .team_container > h1{
+        font-size: 25px;
+    }
+    .team_container p{
+        font-size: 13.2px;
+    }
+    .sub_value{
+        height: 280px;
+    }
+    .sub_goal{
+        height: 260px;
+    }
+    .sub_goal p{
+        font-size: 12px;
+    }
+    .sub_goal h1{
+        font-size: 23px;
+    }
+    .sub_value p{
+        font-size: 15px;
+    }
+    .mission .title2{
+        transform: translateY(0);
+    }
+    .vision .title2{
+        transform: translateY(13vh);
+    }
+    .mission .title2  h1{
+        font-size: 40px;
+    }
+    .vision .title2  h1{
+        font-size: 40px;
+    }
+    .team{
+        margin-left: 10vw;
+        flex-direction: column;
+        height: 90vw;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    .team_container > h1{
+        margin-top: 50px;
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    .team_container > h1::after{
+        display: none;
+    }
+    .sub_team h1::after{
+        width: 4.1vw;
+    }    
+    .sub_team:hover h1::after{
+        width: 4.1vw;
+    } 
+
+    .sub_team p{
+        margin-left: 5vw;
+        font-size: 20px;
+        transform: translateX(0);
+        opacity: 1;
+        z-index: -1;
+    }
+    .sub_team h1{
+        font-size: 30px;
+    }
+
+    .team > img{
+        height: 25vw;
+    }
+  }
+
+/* Khi media nhỏ cỡ mobile */
+@media screen and (max-width: 800px) {
+    .title h1{
+        font-size: 140px;
+    }
+    .title p{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    /* Goal */
+    .goal{
+        height: 225vh;
+    }
+    .goal_container{
+        flex-direction: column;
+    }
+    .sub_goal{
+        width: 55vw;
+        margin-bottom: 30px;
+    }
+    .sub_goal p{
+        width: 52vw;
+        font-size: 2.3vw;
+    }
+    .sub_goal h1{
+        width: 52vw;
+        font-size: 28px;
+    }
+    .goal > h1{
+        font-size: 50px;
+    }
+    .goal a button{
+        width: 45vw;
+        font-size: 5vw;
+        border: 1.9px rgb(52, 51, 51) solid;
+    }
+    .goal a button:hover{
+        border: transparent;
+        color: rgb(15, 15, 15);
+    }
+
+    /* Value */
+    .value{
+        height: 225vh;
+    }
+    .value_container{
+        flex-direction: column;
+    }
+    .sub_value{
+        width: 55vw;
+        margin-bottom: 30px;
+    }
+    .sub_value p{
+        width: 52vw;
+        font-size: 2.85vw;
+    }
+    .sub_value h1{
+        width: 90vw;
+        font-size: 32px;
+    }
+    .value > h1{
+        font-size: 40px;
+    }
+    .value a button{
+        width: 45vw;
+        font-size: 5vw;
+        border: 1.9px rgb(52, 51, 51) solid;
+    }
+    .value a button:hover{
+        border: transparent;
+        color: rgb(15, 15, 15);
+    }
+    .value > h1::after{
+        content: "";
+        align-items: center;
+        top: 90px;
+        height: 3.8px;
+        border-radius: 2px;
+        width: 150px;
+        background-color: rgb(255, 96, 96);
+        position: absolute;
+        transform: translateX(-230px);
+    }
+
+    /* Mission */
+    .mission{
+        height: 35vw;
+    }
+    .mission .img_container{
+        margin-left: 50vw;
+    }
+    .mission img{
+        width: 40vw;
+        margin-right: 15px;
+    }
+    .mission .deco{
+        width: 36vw;
+        height: 35vw;
+        left: 39px;
+        bottom: 4px;
+    }
+    .mission .title2{
+        width: 40vw;
+    }
+    .mission .title2 h1{
+        font-size: 40px;
+    }
+    .mission .title2 p{
+        font-size: 15px;
+    }
+
+    /* Vision */
+    .vision{
+        height: 50vw;
+    }
+    .vision .img_container{
+        margin-left: 5vw;
+    }
+    .vision img{
+        width: 40vw;
+        margin-left: 15px;
+    }
+    .vision .deco{
+        width: 36vw;
+        height: 35vw;
+        right: 38px;
+        bottom: 10px;
+    }
+    .vision .title2{
+        width: 40vw;
+        margin-left: 50vw;
+    }
+    .vision .title2 h1{
+        font-size: 40px;
+    }
+    .vision .title2 p{
+        font-size: 15px;
+    }
+
+    /* Reveal2 */
+    .goal .reveal2.active{
+        background-color: rgb(41, 40, 40);
+        transform: translateY(-10px);
+    }
+    
+    .goal .reveal2.active img{
+        width: 90px;
+    }
+    
+    .goal .reveal2.active h1{
+        color: rgb(255, 228, 228);
+        transform: translateY(0);
+    }
+    
+    .goal .reveal2.active p{
+        display: block;
+        color: white;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .value .reveal2.active{
+        transform: translateY(-10px);
+    }
+    
+    .value .reveal2.active img{
+        width: 90px;
+    }
+    
+    .value .reveal2.active p{
+        display: inline-block;
+        color: white;
+        opacity: 1;
+        transform: translateY(90px);
+    }
+    
+    .value .reveal2.active h1{
+        color: rgb(250, 197, 197);
+        transform: translateY(90px);
+    }
+}
+
+@media screen and (max-width: 750px){
+    .team{
+        height: 110vw;
+    }
+}
+
+@media screen and (max-width: 555px){
+    /* Mission */
+    .mission{
+        height: 130vw;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    .mission img{
+        width: 85vw;
+        position: relative;
+    }
+    .mission .deco{
+        content: "";
+        align-items: center;
+        width: 85vw;
+        height: 70vw;
+        left: -3vw;
+        bottom: 6vw;
+        position: absolute;
+    }
+    .mission .img_container{
+        position: absolute;
+        margin-left: 8vw;
+    }
+    
+    .mission .title2{
+        position: absolute;
+        transform: translateY(75vw);
+        margin-left: 5vw;
+        margin-right: 3vw;
+        text-align: right;
+        padding: 10px;
+        width: 85vw;
+    }
+    .mission .title2 h1{
+        font-size: 9vw;
+        text-align: left;
+    }
+    .mission .title2 h1::after{
+        content: "";
+        align-items: center;
+        left: 10px;
+        bottom: 20px;
+        height: 3.3px;
+        border-radius: 2px;
+        width: 100px;
+        background-color: rgb(255, 96, 96);
+        position: absolute;
+    }
+    .mission .title2 p{
+        text-align: left;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    /* Vision */
+    .vision{
+        height: 130vw;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    .vision img{
+        width: 85vw;
+        position: relative;
+    }
+    .vision .deco{
+        content: "";
+        align-items: center;
+        width: 85vw;
+        height: 70vw;
+        left: 0.5vw;
+        bottom: 7vw;
+        position: absolute;
+    }
+    .vision .img_container{
+        position: absolute;
+        margin-left: 4vw;
+    }
+    
+    .vision .title2{
+        position: absolute;
+        transform: translateY(75vw);
+        margin-left: 5vw;
+        margin-right: 3vw;
+        text-align: right;
+        padding: 10px;
+        width: 85vw;
+    }
+    .vision .title2 h1{
+        font-size: 9vw;
+        text-align: left;
+    }
+    .vision .title2 h1::after{
+        content: "";
+        align-items: center;
+        left: 10px;
+        bottom: 20px;
+        height: 3.3px;
+        border-radius: 2px;
+        width: 100px;
+        background-color: rgb(255, 96, 96);
+        position: absolute;
+    }
+    .vision .title2 p{
+        text-align: left;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
+    /* Goal */
+    .sub_goal{
+        width: 95vw;
+        
+    }
+    .sub_goal p{
+        width: 80vw;
+        font-size: 3.6vw;
+    }
+    .sub_goal h1{
+        width: 52vw;
+        font-size: 28px;
+    }
+    .goal > h1{
+        font-size: 40px;
+    }
+    .goal > h1::after{
+        transform: translateX(-160px);
+    }
+
+    /* Value */
+    .value{
+        height: 225vh;
+    }
+    .sub_value{
+        width: 95vw;
+    }
+    .sub_value p{
+        width: 80vw;
+        font-size: 3.6vw;
+    }
+    .sub_value h1{
+        width: 90vw;
+        font-size: 28px;
+    }
+    .value > h1{
+        font-size: 40px;
+    }
+
+    /* Team */
+    .team{
+        height: 130vw;
+    }
+    .team_container > h1{
+        font-size: 7vw;
+    }
+    .sub_team h1{
+        font-size: 5vw;
+    }
+    .sub_team p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 365px){
+    .team{
+        height: 155vw;
+    }
+}
+
+@media screen and (max-width: 436px){
+    .title h1{
+        font-size: 100px;
+    }
+    .title p{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    /* Team */
+    .team > img{
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 352px){
+    /* Team */
+    .sub_team p{
+        font-size: 12px;
+    }
+    
+    /* Mission */
+    .mission{
+        height: 120vw;
+    }
+}
+
+@media screen and (max-width: 353px){
+    .goal{
+        height: 225vh;
+    }
+    .team > img{
+        margin-left: 50px;
+    }
+    .goal > h1{
+        font-size: 38px;
+    }
+    .goal > h1::after{
+        transform: translateX(-153px);
+    }
+    .value > h1{
+        font-size: 35px;
+    }
+    .value > h1::after{
+        transform: translateX(-205px);
+    }
+}
+
+
+/* Media */
+.counter-up{
+    background: url("Assets/Images/Social.jpg") no-repeat;
+    min-height: 50vh;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .counter-up::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+  }
+  .counter-up .content{
+    z-index: 1;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .counter-up .content .box{
+    border: 2px dashed rgba(255,255,255,0.6);
+    width: calc(25% - 30px);
+    height: 250px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .content .box .icon{
+    font-size: 48px;
+    color: #e6e6e6;
+  }
+  .content .box .counter{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: Iciel;
+    color: rgb(255, 126, 126);
+  }
+  .content .box .counter::after{
+    content: "+";
+    font-size: 50px;
+    font-weight: 500;
+    font-family: Iciel;
+    color: rgb(255, 229, 126);
+  }
+  .content .box .text{
+    font-weight: 400;
+    color: #ccc;
+    font-family: Iciel;
+    font-size: 25px;
+    text-align: center;
+  }
+  @media screen and (max-width: 1036px) {
+    .counter-up{
+      padding: 50px 50px 0 50px;
+    }
+    .counter-up .content .box{
+      width: calc(50% - 30px);
+      margin-bottom: 50px;
+    }
+  }
+  @media screen and (max-width: 580px) {
+    .counter-up .content .box{
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .wrapper{
+      padding: 20px;
+    }
+    .counter-up{
+      padding: 30px 20px 0 20px;
+    }
+  }
+    </style>
+</head>
+<body>
+    <div id = "header"></div>
+    <div class="container">
+        <div class="home">
+            <div class="backgroundcover"></div>
+            <img src="Assets/Images/Aboutus.jpg" class="parallax1" alt="Study1">
+            <div class="title">
+                <h1>About us</h1>
+                <p>Latibule of the Heart (LOTH)</p>
+            </div>
+        </div>
+
+        <div class="mission reveal">
+            <div class="title2">
+                <h1>Sứ mệnh</h1>
+                <p>LOTH ra đời với sứ mệnh giúp các bạn trẻ phát triển kĩ năng sống và vận dụng các kiến thức đã được học một cách thiết thực hơn trong cuộc sống.</p>
+            </div>
+            <div class="img_container">
+                <div class="deco"></div>
+                <img src="Assets/Images/Aboutus2.jpg" alt="Study2">
+            </div>
+        </div>
+        <div class="vision reveal">
+            <div class="title2">
+                <h1>Tầm nhìn</h1>
+                <p>Đến năm 2025, LOTH sẽ trở thành tổ chức giáo dục phi lợi nhuận được công nhận và đáng tin cậy tại Việt Nam.</p>
+            </div>
+            <div class="img_container">
+                <div class="deco"></div>
+                <img src="Assets/Images/Aboutus3.jpg" alt="Study3">
+            </div>
+        </div>
+        <div class="goal reveal">
+            <h1>Mục tiêu</h1>
+            <div class="goal_container">
+                <div class="sub_goal reveal2">
+                    <img src="Assets/Images/MoneyIcon.png" alt="Money">
+                    <h1>Tài chính</h1>
+                    <p>Các khoản tài chính từ nhà tài trợ và quỹ quyên góp được sử dụng hợp lý và hiệu quả để hỗ trợ dụng cụ và tư liệu cho các dự án của tổ chức.</p>
+                </div>
+                <div class="sub_goal reveal2">
+                    <img src="Assets/Images/WorkshopIcon.png" alt="Workshop">
+                    <h1>Sản phẩm</h1>
+                    <p>LOTH tổ chức các dự án giáo dục như workshop - webinar; các chương trình dạy học tình nguyện và các bài viết về kĩ năng sống.</p>
+                </div>
+                <div class="sub_goal reveal2">
+                    <img src="Assets/Images/TrustIcon.png" alt="Trust">
+                    <h1>Con người</h1>
+                    <p>Môi trường làm việc cởi mở và tôn trọng lẫn nhau; có cho bản thân những kiến thức, kinh nghiệm và trải nghiệm thú vị.</p>
+                </div>
+                <div class="sub_goal reveal2">
+                    <img src="Assets/Images/StudentIcon.png" alt="Student">
+                    <h1>Thị trường</h1>
+                    <p>Không chỉ học sinh trong một độ tuổi nhất định mà tất cả học sinh ở từng cấp sẽ có các khóa học phù hợp và các kĩ năng sống rất thiết thực.</p>
+                </div>
+            </div>
+            <div class="BtnContainer">
+                <a href="events.html"><button><span></span>Xem thêm</button></a>
+            </div>
+        </div>
+
+        <div class="value reveal">
+            <h1>Giá trị cốt lõi</h1>
+            <div class="value_container">
+                <div class="sub_value reveal2">
+                    <h1>Giá trị thực tiễn</h1>
+                    <p>Các bạn học sinh sẽ được khám phá cách vận dụng những kiến thức vào cuộc sống một các hiệu quả và phù hợp.</p>
+                    <div class="value_background"></div>
+                </div>
+                <div class="sub_value reveal2">
+                    <h1>Giá trị bền vững</h1>
+                    <p>Các kiến thức và kĩ năng nhận được có giá trị sử dụng lâu dài.</p>
+                </div>
+                <div class="sub_value reveal2">
+                    <h1>Giá trị tích cực</h1>
+                    <p>Mang đến một góc nhìn cởi mở hơn, tích cực hơn về việc học thông quá các hoạt động truyền cảm hứng và tìm ra giá trị thật sự của việc học.</p>
+                </div>
+                <div class="sub_value reveal2">
+                    <h1>Giá trị kết nối</h1>
+                    <p>LOTH là chiếc cầu nối  các thế hệ đầy kinh nghiệm đi trước và những bạn học sinh có khao khát được học hỏi và đầy sức sáng tạo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="team reveal">
+            <img src="Assets/Images/Team.svg" alt="image">
+            <div class="team_container">
+                <h1>Các phòng ban hiện có</h1>
+                <div class="sub_team">
+                    <img src="Assets/Images/Team1.png" alt="Icon1" class="team_icon">
+                    <h1>HR</h1>
+                    <p>Nhân sự (Human Resources Department)</p>
+                </div>
+                <div class="sub_team">
+                    <img src="Assets/Images/Team2.png" alt="Icon2" class="team_icon">
+                    <h1>PR</h1>
+                    <p>Truyền thông (Public Relations Department)</p>
+                </div>
+                <div class="sub_team">
+                    <img src="Assets/Images/Team3.png" alt="Icon3" class="team_icon">
+                    <h1>Des</h1>
+                    <p>Thiết kế (Design Department)</p>
+                </div>
+                <div class="sub_team">
+                    <img src="Assets/Images/Team4.png" alt="Icon4" class="team_icon">
+                    <h1>PG</h1>
+                    <p>Chương trình (Program Department)</p>
+                </div>
+                <div class="sub_team">
+                    <img src="Assets/Images/Team5.png" alt="Icon5" class="team_icon">
+                    <h1>EM</h1>
+                    <p>Sự kiện (Event Management Department)</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <div class="counter-up">
+        <div class="content">
+          <div class="box">
+            <img src="Assets/Images/Icon1.png" alt="Icon1" class="icon">
+            <div class="counter" data-target="1600">0</div>
+            <div class="text">Lượt tương tác mỗi bài viết</div>
+          </div>
+          <div class="box">
+            <img src="Assets/Images/Icon2.png" alt="Icon2" class="icon">
+            <div class="counter" data-target="1100">0</div>
+            <div class="text">Lượt theo dõi trên Fanpage</div>
+          </div>
+          <div class="box">
+            <img src="Assets/Images/Icon3.png" alt="Icon3" class="icon">
+            <div class="counter" data-target="1000">0</div>
+            <div class="text">Lượt tiếp cận tháng 1/2022</div>
+          </div>
+        </div>
+    </div>
+
+    <div id = "footer"></div>
+
+    <script src="main.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('scroll', counterReveal);
+    
+        function reveal(){
+          var reveals = document.querySelectorAll('.reveal');
+    
+          for(var i = 0; i < reveals.length; i++){
+    
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+    
+            if(revealtop < windowheight - revealpoint){
+              reveals[i].classList.add('active');
+            }
+            else{
+              reveals[i].classList.remove('active');
+            }
+          }
+
+          var reveal2s = document.querySelectorAll('.reveal2');
+    
+          for(var i = 0; i < reveal2s.length; i++){
+    
+            var windowheight = window.innerHeight;
+            var reveal2top = reveal2s[i].getBoundingClientRect().top;
+            var reveal2point = 150;
+    
+            if(reveal2top < windowheight - reveal2point){
+              reveal2s[i].classList.add('active');
+            }
+            else{
+              reveal2s[i].classList.remove('active');
+            }
+          }
+        }
+
+        function counterReveal(){
+            const counters = document.querySelectorAll('.counter');
+            const counterups = document.querySelectorAll('.counter-up');
+            const speed = 400; // The lower the slower
+            
+            for(var i = 0; i < counterups.length; i++){
+        
+            var windowheight = window.innerHeight;
+            var revealtop = counterups[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if(revealtop < windowheight - revealpoint){
+                counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+
+                    // Lower inc to slow and higher to slow
+                    const inc = target / speed;
+
+                    // console.log(inc);
+                    // console.log(count);
+
+                    // Check if target is reached
+                    if (count < target) {
+                        // Add inc to count and output in counter
+                        counter.innerText = count + inc;
+                        // Call function every ms
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCount();
+                });
+            }
+            else{
+                counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    counter.innerText = 0; 
+                };
+
+                updateCount();
+                });
+            }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

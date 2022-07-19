@@ -1,0 +1,102 @@
+<style>
+    /* CSS for footer */
+  @font-face {
+      font-family: Iciel;
+      src: url(Assets/Fonts/Iciel.ttf);
+  }
+  
+  @font-face {
+      font-family: Oswald;
+      src: url(Assets/Fonts/Oswald.ttf);
+  }
+  
+  body{
+      line-height: 1.5;
+      font-family: 'Oswald', sans-serif;
+  }
+  .footer-container{
+      max-width: 1170px;
+      margin:auto;
+  }
+  .footer-row{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  .footer{
+      background-color: #292929;
+      padding: 70px 0;
+      color: white;
+  }
+  .footer a{
+      color:white;
+      text-decoration:underline;
+  }
+  .footer-col{
+     width: 45%;
+     padding: 0 15px;
+     margin-top: 50px;
+  }
+  .footer-col h4{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+      font-family: Iciel;
+      text-transform: uppercase;
+  }
+  .footer-col p{
+      text-align: justify;
+      font-size: 16px;
+      font-family: Oswald;
+  }
+  .footer-col h4::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+  }
+  .footer-copyright{
+      text-align: center;
+      font-size: 18px;
+      margin-top: 70px;
+      margin-bottom: 0px;
+  }
+  
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  </style>
+  <footer class="footer">
+      <div class="footer-container">
+             <div class="footer-row">
+                 <div class="footer-col">
+                     <h4>Chúng tôi là ai</h4>
+                     <p>Latibule of the Heart (LOTH) là tổ chức giáo dục phi lợi nhuận được thành lập với mục tiêu cung cấp những kiến thức thực tiễn và tạo cảm hứng học tập cho các bạn trẻ ở Việt Nam. <br> <br> Thông qua các hoạt động dạy học thiện nguyện, workshop, webinar và bootcamp về giáo dục và các phương pháp học tập, đội ngũ LOTH hướng đến một cộng đồng học sinh có khả năng vận dụng những kiến thức đã được cung cấp một cách hợp lý và hiệu quả trong cuộc sống. <br> <br> Đồng thời. LOTH có sứ mệnh mang đến một góc nhìn cởi mở hơn về việc học và tạo nguồn động lực thúc đẩy những giá trị thiết thực của những kiến thức đã được cung cấp trong trường học.   </p>	 	    </div>
+              <div class="footer-col">
+                     <h4>contact us</h4>
+                     Email: latibuleoftheheart@gmail.com <br>Facebook: <a href="https://www.facebook.com/Iatibule">Latibule of the Heart </a></div>
+              </div>
+          </div>
+        </div>
+      <div class="footer-copyright">
+          ©2022 Latibule of the Heart. All rights reserved. <br>Proudly created by <a href="https://www.facebook.com/The-itHelp-Project-111001754810585/">The itHelp Project</a>
+      </div>
+    </footer>
+  
+    <script src="main.js"> </script>

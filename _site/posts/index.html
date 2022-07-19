@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Posts - Blog
+    
+  </title>
+
+  <meta name="description" content="Here are our posts">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/Latibule/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/Latibule/posts/">
+  <link rel="alternate" type="application/rss+xml" title="Blog" href="/Latibule/feed.xml">
+
+</head>
+
+
+<body>
+
+  <style>
+  @font-face {
+    font-family: Iciel;
+    src: url(../Assets/Fonts/Iciel.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header-container{
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background-color: white;
+}
+
+/* Navbar */
+.navbar{
+    position: absolute;
+    width: 100vw;
+    height: 120px;
+    margin: auto;
+    padding: 35px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+
+    animation: Navbar_Transition 0.6s ease-in-out;
+}
+.black{
+    background-color: rgb(41, 40, 40);
+    width: 100vw;
+    height: 120px;
+
+    animation: Navbar_Transition 0.6s ease-in-out;
+}
+.black a .Logo{
+    transform: translateX(60px);
+}
+.navbar a .Logo{
+    transform: translateX(60px);
+}
+.Logo{
+    height: 13vh;
+    z-index: 5;
+}
+.navbar ul.PC_navbar li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 40px;
+    position: relative;
+}
+.navbar ul.PC_navbar li a{
+    font-family: Iciel;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(41, 40, 40);
+}
+.black ul.PC_navbar li a{
+    color: white;
+}
+ul.PC_navbar{
+    transform: translateX(-60px);
+}
+
+.navbar ul.PC_navbar li::after{
+    content: "";
+    align-items: center;
+    height: 3.5px;
+    bottom: -8px;
+    left: 0;
+    /* Cái này set cho animation */
+    width: 0;
+    background-color: transparent;
+    position: absolute;
+    transition: 0.25s;
+}
+
+/* Hamburger */
+.burger_container{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 25px;
+    right: 0;
+    display: inline-block;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger{
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.35s ease-in-out;
+}
+
+.burger::before, .burger::after{
+    content: "";
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.35s ease-in-out;
+}
+
+.burger::before{
+    transform: translateY(-8px);
+}
+
+.burger::after{
+    transform: translateY(8px);
+}
+
+.burger_container.open .burger{
+    transform: translateX(-20px);
+    background-color: transparent;
+}
+
+.burger_container.open .burger::before{
+    transform: rotate(45deg) translate(20px, -19.5px);
+}
+
+.burger_container.open .burger::after{
+    transform: rotate(-45deg) translate(20px, 19.5px);
+}
+
+.burger_menu{
+    color: transparent;
+    position: absolute;
+    width: 100vw;
+    background-color: transparent;
+
+    /* Chỉnh dựa trên height của .Logo với 1/2 height của burger_menu */
+    transform: translateX(-15px) translateY(220px);
+    transition: all ease-in-out .5s;
+}
+
+.burger_menu ul.mobile_navbar a li{
+    text-align: center;
+    list-style: none;
+    display: none;
+    padding: 10px;
+}
+
+.burger_menu ul.mobile_navbar a{
+    font-family: Iciel;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: transparent;
+    transition: all 0.15s ease-in-out;
+}
+
+.burger_menu.open{
+    display: block;
+    background-color: rgb(41, 40, 40);
+    transform: translateX(-15px) translateY(200px);
+    transition: all 0.5s ease-in-out;
+}
+
+.burger_menu.open ul.mobile_navbar a li{
+    color: white;
+    transition: all 0.15s ease-in-out;
+    display: block;
+}
+
+.burger_menu.open ul.mobile_navbar a li:hover{
+    color: rgb(164, 223, 250);
+}
+
+@keyframes Navbar_Transition {
+    0%{
+        transform: translateY(40px);
+        color: transparent;
+        height: 140px;
+    }
+    100%{
+        transform: translateY(0%);
+        height: 120px;
+    }
+}
+
+/* Khi media lớn như pc */
+@media screen and (min-width: 801px) {
+    .burger_container{
+        display: none;
+    }
+    .navbar ul.PC_navbar li a {
+        font-size: 20px;
+    }
+    .navbar ul.PC_navbar li:hover::after{
+        width: 100%;
+        background-color: rgb(255, 114, 114);
+    }
+    .navbar ul.PC_navbar li a:hover{
+        color: rgb(93, 162, 219);
+    }
+    .black ul.PC_navbar li a:hover{
+        color: rgb(167, 212, 247);
+    }
+    .burger_menu{
+        display: none;
+    }
+  }
+/* Chỉnh cỡ  navbar cho phù hợp  */
+  @media screen and (max-width: 1200px) {
+    .navbar ul.PC_navbar li a {
+        font-size: 15px;
+      }
+    .navbar ul.PC_navbar li::after{
+        height: 4px;
+    }
+  }
+
+  @media screen and (max-width: 1060px) {
+    .navbar ul.PC_navbar li a {
+        font-size: 13px;
+    }
+    .navbar ul.PC_navbar li {
+        margin: 0 20px;
+    }
+      .navbar ul.PC_navbar li::after{
+        height: 3.3px;
+    }
+  }
+
+/* Khi media nhỏ cỡ mobile */
+  @media screen and (max-width: 800px) {
+    .navbar ul.PC_navbar{
+        display: none;
+    }
+    @keyframes Navbar_Transition {
+        0%{
+            transform: translateY(40px);
+            color: transparent;
+            height: 120px;
+        }
+        100%{
+            transform: translateY(0);
+            height: 100px;
+        }
+    }
+    .navbar ul.PC_navbar li a, .navbar ul.PC_navbar li::after {
+        display: none;
+    }
+    .Logo{
+        width: 60px;
+        height: auto;
+        margin-left: 25px;
+    }
+    .navbar{
+        background-color: rgb(41, 40, 40);
+        height: 100px;
+        width: 100vw;
+    }
+    .black a .Logo{
+        transform: translateX(0px);
+    }
+    .navbar a .Logo{
+        transform: translateX(0px);
+    }
+  }
+
+</style>
+<div class="header-container">
+  <div class="navbar black">
+        <a href="../index.html"><img src="../Assets/Images/LogoTrans.png" alt="Logo" class="Logo"></a>
+      
+        <ul class="PC_navbar">
+            <li><a href="../index.html"> Home</a></li>
+            <li><a href="../aboutus.html"> About us</a></li>
+            <li><a href="#"> Blog</a></li>
+            <li><a href="../events.html"> Events</a></li>
+            <li><a href="../volunteer.html"> Volunteer</a></li>
+            <li><a href="../funding.html"> Gây quỹ</a></li>
+        </ul>
+        <div class="burger_container">
+            <div class="burger"></div>
+        </div>
+        <div class="burger_menu">
+            <ul class="mobile_navbar">
+                <a href="../index.html"><li>Home</li></a>
+                <a href="../aboutus.html"><li>About us</li></a>
+                <a href="#"><li> Blog</li></a>
+                <a href="../events.html"><li>Events</li></a>
+                <a href="../volunteer.html"><li>Volunteer</li></a>
+                <a href="../funding.html"><li>Gây quỹ</li></a>
+            </ul>
+        </div>
+  </div>
+</div>
+
+<script>
+    const btncontainer = document.querySelector(".burger_container");
+    const btnmenu = document.querySelector(".burger_menu");
+    let menuOpen = false;
+    btncontainer.addEventListener("click", function(){
+        if(!menuOpen){
+            btncontainer.classList.add("open");
+            btnmenu.classList.add("open");
+            menuOpen = true;
+        }
+        else{
+            btncontainer.classList.remove("open");
+            btnmenu.classList.remove("open");
+            menuOpen = false;
+        }
+    })
+  </script>
+
+
+
+
+  <link rel="stylesheet" href="../posts/index.css">
+
+<!-- Page.html là default thêm cái template title, description và background -->
+<!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/Latibule/img/bg-post.jpg')">
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Posts</h1>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        
+
+<article class="post-preview">
+  <a href="/Latibule/2022/04/14/recap-workshop.html">
+    <h2 class="post-title">Recap Workshop</h2>
+    
+    <h3 class="post-subtitle">Nghỉ và nghĩ</h3>
+    
+  </a>
+  <p class="post-meta">Posted on April 14, 2022 &middot; <span class="reading-time" title="Estimated read time">
+  
+   1 min  read </span>
+
+  </p>
+</article>
+
+<hr>
+
+
+
+<article class="post-preview">
+  <a href="/Latibule/2022/04/14/workshop.html">
+    <h2 class="post-title">Workshop</h2>
+    
+    <h3 class="post-subtitle">Nghỉ và nghĩ</h3>
+    
+  </a>
+  <p class="post-meta">Posted on April 14, 2022 &middot; <span class="reading-time" title="Estimated read time">
+  
+   2 mins  read </span>
+
+  </p>
+</article>
+
+<hr>
+
+
+
+<!-- Pager -->
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <style>
+@font-face {
+    font-family: Oswald;
+    src: url(../../../Assets/Fonts/Oswald.ttf);
+}
+
+@font-face {
+    font-family: Oswald1;
+    src: url(../Assets/Fonts/Oswald.ttf);
+}
+
+body{
+	line-height: 1.5;
+  font-family: Oswald, Oswald1;
+}
+.footer-container{
+	max-width: 1170px;
+	margin:auto;
+}
+.footer-row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.footer{
+  margin-top: 20px;
+	background-color: #292929;
+  padding: 70px 0;
+  color: white;
+  font-family:Oswald, Oswald1;
+}
+.footer a{
+    color:white;
+    text-decoration:underline;
+}
+.footer-col{
+   width: 45%;
+   padding: 0 15px;
+   margin-top: 50px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+	font-family: Oswald, Oswald1;
+	text-transform: uppercase;
+}
+.footer-col p{
+	text-align: justify;
+	font-size: 16px;
+	font-family: Oswald, Oswald1;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-copyright{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 70px;
+    margin-bottom: 0px;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+</style>
+
+<footer class="footer">
+    <div class="footer-container">
+  	 	<div class="footer-row">
+  	 		<div class="footer-col">
+  	 			<h4>Chúng tôi là ai</h4>
+                   <p>Latibule of the Heart (LOTH) là tổ chức giáo dục phi lợi nhuận được thành lập với mục tiêu cung cấp những kiến thức thực tiễn và tạo cảm hứng học tập cho các bạn trẻ ở Việt Nam. <br> <br> Thông qua các hoạt động dạy học thiện nguyện, workshop, webinar và bootcamp về giáo dục và các phương pháp học tập, đội ngũ LOTH hướng đến một cộng đồng học sinh có khả năng vận dụng những kiến thức đã được cung cấp một cách hợp lý và hiệu quả trong cuộc sống. <br> <br> Đồng thời. LOTH có sứ mệnh mang đến một góc nhìn cởi mở hơn về việc học và tạo nguồn động lực thúc đẩy những giá trị thiết thực của những kiến thức đã được cung cấp trong trường học.   </p>	 	    </div>
+            <div class="footer-col">
+  	 			<h4>contact us</h4>
+                   Email: latibuleoftheheart@gmail.com <br>Facebook: <a href="https://www.facebook.com/Iatibule">Latibule of the Heart </a></div>
+            </div>
+        </div>
+  	</div>
+    <div class="footer-copyright">
+        ©2022 Latibule of the Heart. All rights reserved. <br>Proudly created by <a href="https://www.facebook.com/The-itHelp-Project-111001754810585/">The itHelp Project</a>
+    </div>
+  </footer>
+
+
+
+
+  <script src="main.js"> </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/Latibule/assets/vendor/startbootstrap-clean-blog/js/scripts.js"></script>
+
+<script src="/Latibule/assets/scripts.js"></script>
+
+
+
+
+
+</body>
+
+</html>
