@@ -1,2 +1,2 @@
-# Latibule
-A website for Latibule. Created by The itHelp Project (by Dang Gia Chi ft. La Van Hoa)
+# Langthang
+A website for Lang Thang 2022. Created by The itHelp Project 

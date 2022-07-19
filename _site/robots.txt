@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/Latibule/sitemap.xml
+Sitemap: http://localhost:4000/Template-with-blog/sitemap.xml
