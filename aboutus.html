@@ -155,18 +155,96 @@
 
 .title div a button:hover{
     border: transparent;
-    color: rgb(15, 15, 15);
+    color: rgb(15, 15, 15)
 }
 
 .title2{
     color: rgb(73, 66, 66);
 }
-/* Mission */
-.mission{
+/* origin */
+.origin{
     height: 70vh;
     position: relative;
     display: flex;
     flex-direction: row;
+}
+
+.origin::after{
+    content: "";
+    align-items: center;
+    left: 0;
+    bottom: -70px;
+    height: 3px;
+    border-radius: 2px;
+    width: 35vw;
+
+    /* (100 - width)/2 */
+    transform: translateX(32.5vw);
+
+    background-color: rgba(69, 65, 65, 0.2);
+    position: absolute;
+}
+
+.origin img{
+    width: 29.8vw;
+    position: relative;
+}
+
+.origin .deco{
+    content: "";
+    align-items: center;
+    width: 25.4vw;
+    height: 25.4vw;
+    left: 112px;
+    bottom: 28px;
+    background: linear-gradient(rgb(255, 96, 96), rgb(191, 134, 195));
+    position: absolute;
+}
+
+.origin .img_container{
+    position: absolute;
+    margin-left: 60vw;
+}
+
+.origin .title2{
+    position: absolute;
+    transform: translateY(0vh);
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: right;
+    padding: 10px;
+    width: 50.5vw;
+}
+
+.origin .title2 p{
+    position: absolute;
+    margin-top: 20px;
+    font-family: Vollkorn;
+}
+
+.origin .title2 h1{
+    font-family: Iciel;
+    padding-bottom: 20px;
+}
+
+.origin .title2 h1::after{
+    content: "";
+    align-items: center;
+    float: right;
+    right: 10px;
+    bottom: 20px;
+    height: 3.3px;
+    border-radius: 2px;
+    width: 100px;
+    background-color: rgb(255, 96, 96);
+    position: absolute;
+}
+
+/* Mission */
+.mission{
+    height: 70vh;
+    position: relative;
+    margin-top: 100px;
 }
 
 .mission::after{
@@ -195,30 +273,30 @@
     align-items: center;
     width: 25.4vw;
     height: 25.4vw;
-    left: 112px;
-    bottom: 28px;
-    background: linear-gradient(rgb(255, 96, 96), rgb(191, 134, 195));
+    right: 110px;
+    bottom: 42px;
+    background: linear-gradient(rgb(191, 134, 195), rgb(255, 96, 96));
     position: absolute;
 }
 
 .mission .img_container{
     position: absolute;
-    margin-left: 60vw;
+    margin-left: 10vw;
 }
 
 .mission .title2{
-    position: absolute;
-    transform: translateY(15vh);
-    margin-left: 3vw;
+    position: relative;
+    transform: translateY(10vh);
     margin-right: 3vw;
-    text-align: right;
+    margin-left: 45vw;
+    text-align: left;
     padding: 10px;
-    width: 50.5vw;
+    width: 50vw;
 }
 
 .mission .title2 p{
     position: absolute;
-    margin-top: 20px;
+    margin-top: 30px;
     font-family: Vollkorn;
 }
 
@@ -228,84 +306,6 @@
 }
 
 .mission .title2 h1::after{
-    content: "";
-    align-items: center;
-    float: right;
-    right: 10px;
-    bottom: 20px;
-    height: 3.3px;
-    border-radius: 2px;
-    width: 100px;
-    background-color: rgb(255, 96, 96);
-    position: absolute;
-}
-
-/* Vision */
-.vision{
-    height: 70vh;
-    position: relative;
-    margin-top: 100px;
-}
-
-.vision::after{
-    content: "";
-    align-items: center;
-    left: 0;
-    bottom: -70px;
-    height: 3px;
-    border-radius: 2px;
-    width: 35vw;
-
-    /* (100 - width)/2 */
-    transform: translateX(32.5vw);
-
-    background-color: rgba(69, 65, 65, 0.2);
-    position: absolute;
-}
-
-.vision img{
-    width: 29.8vw;
-    position: relative;
-}
-
-.vision .deco{
-    content: "";
-    align-items: center;
-    width: 25.4vw;
-    height: 25.4vw;
-    right: 110px;
-    bottom: 42px;
-    background: linear-gradient(rgb(191, 134, 195), rgb(255, 96, 96));
-    position: absolute;
-}
-
-.vision .img_container{
-    position: absolute;
-    margin-left: 10vw;
-}
-
-.vision .title2{
-    position: relative;
-    transform: translateY(23vh);
-    margin-right: 3vw;
-    margin-left: 45vw;
-    text-align: left;
-    padding: 10px;
-    width: 50vw;
-}
-
-.vision .title2 p{
-    position: absolute;
-    margin-top: 30px;
-    font-family: Vollkorn;
-}
-
-.vision .title2 h1{
-    font-family: Iciel;
-    padding-bottom: 20px;
-}
-
-.vision .title2 h1::after{
     content: "";
     align-items: center;
     float: left;
@@ -374,13 +374,13 @@
     height: 3.8px;
     border-radius: 2px;
     width: 150px;
-    background-color: rgb(255, 96, 96);
+    background-color: rgb(130, 0, 0);
     position: absolute;
     transform: translateX(-190px);
 }
 
 .sub_goal img{
-    width: 130px;
+    width: 70px;
     transition:  0.35s all ease-in-out;
 }
 
@@ -388,7 +388,7 @@
     display: none;
     font-family: Spectral;
     position: relative;
-    width: 20vw;
+    width: 15vw;
     text-align: justify;
     opacity: 0;
     color: white;
@@ -408,8 +408,8 @@
 
 .sub_goal {
     /* Width của p */
-    width: 20vw;
-    height: 250px;
+    width: 15vw;
+    height: 300px;
 
     padding: 1vw;
     display: flex;
@@ -496,7 +496,7 @@
 
 .goal a button:hover{
     border: transparent;
-    color: rgb(15, 15, 15);
+    color: rgb(255, 255, 255);
 }
 
 .BtnContainer button:hover span{
@@ -796,16 +796,16 @@
         z-index: -2;
     }
 
+    .origin .title2 h1{
+        font-size: 50px;
+    }
     .mission .title2 h1{
         font-size: 50px;
     }
-    .vision .title2 h1{
-        font-size: 50px;
-    }
-    .mission .title2 p{
+    .origin .title2 p{
         font-size: 25px;
     }
-    .vision .title2 p{
+    .mission .title2 p{
         font-size: 25px;
     }
     .goal > h1 {
@@ -828,16 +828,16 @@
     }
   }
   @media screen and (max-width: 1400px) {
+    .origin .title2 h1{
+        font-size: 50px;
+    }
     .mission .title2 h1{
         font-size: 50px;
     }
-    .vision .title2 h1{
-        font-size: 50px;
-    }
-    .mission .title2 p{
+    .origin .title2 p{
         font-size: 20px;
     }
-    .vision .title2 p{
+    .mission .title2 p{
         font-size: 20px;
     }
     .team_container > h1{
@@ -854,16 +854,16 @@
     }
   }
   @media screen and (max-width: 1350px) {
+    .origin .title2 h1{
+        font-size: 50px;
+    }
     .mission .title2 h1{
         font-size: 50px;
     }
-    .vision .title2 h1{
-        font-size: 50px;
-    }
-    .mission .title2 p{
+    .origin .title2 p{
         font-size: 18px;
     }
-    .vision .title2 p{
+    .mission .title2 p{
         font-size: 18px;
     }
     .team_container > h1{
@@ -889,23 +889,23 @@
     }
   }
   @media screen and (max-width: 1020px) {
-    .mission .title2 p{
+    .origin .title2 p{
         font-size: 17px;
     }
-    .mission .deco{
+    .origin .deco{
         left: 60px;
         bottom: 20px;
     }
-    .vision .deco{
+    .mission .deco{
         right: 60px;
         bottom: 30px;
     }
   }
   @media screen and (max-width: 1008px) {
-    .mission .title2 p{
+    .origin .title2 p{
         font-size: 18px;
     }
-    .vision .title2 p{
+    .mission .title2 p{
         font-size: 18px;
     }
     .team_container > h1{
@@ -929,16 +929,16 @@
     .sub_value p{
         font-size: 15px;
     }
-    .mission .title2{
+    .origin .title2{
         transform: translateY(0);
     }
-    .vision .title2{
+    .mission .title2{
         transform: translateY(13vh);
     }
-    .mission .title2  h1{
+    .origin .title2  h1{
         font-size: 40px;
     }
-    .vision .title2  h1{
+    .mission .title2  h1{
         font-size: 40px;
     }
     .team{
@@ -1064,58 +1064,58 @@
         transform: translateX(-230px);
     }
 
-    /* Mission */
-    .mission{
+    /* origin */
+    .origin{
         height: 35vw;
     }
-    .mission .img_container{
+    .origin .img_container{
         margin-left: 50vw;
     }
-    .mission img{
+    .origin img{
         width: 40vw;
         margin-right: 15px;
     }
-    .mission .deco{
+    .origin .deco{
         width: 36vw;
         height: 35vw;
         left: 39px;
         bottom: 4px;
     }
-    .mission .title2{
+    .origin .title2{
         width: 40vw;
     }
-    .mission .title2 h1{
+    .origin .title2 h1{
         font-size: 40px;
     }
-    .mission .title2 p{
+    .origin .title2 p{
         font-size: 15px;
     }
 
-    /* Vision */
-    .vision{
+    /* Mission */
+    .mission{
         height: 50vw;
     }
-    .vision .img_container{
+    .mission .img_container{
         margin-left: 5vw;
     }
-    .vision img{
+    .mission img{
         width: 40vw;
         margin-left: 15px;
     }
-    .vision .deco{
+    .mission .deco{
         width: 36vw;
         height: 35vw;
         right: 38px;
         bottom: 10px;
     }
-    .vision .title2{
+    .mission .title2{
         width: 40vw;
         margin-left: 50vw;
     }
-    .vision .title2 h1{
+    .mission .title2 h1{
         font-size: 40px;
     }
-    .vision .title2 p{
+    .mission .title2 p{
         font-size: 15px;
     }
 
@@ -1169,6 +1169,61 @@
 }
 
 @media screen and (max-width: 555px){
+    /* origin */
+    .origin{
+        height: 130vw;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }f
+    .origin img{
+        width: 85vw;
+        position: relative;
+    }
+    .origin .deco{
+        content: "";
+        align-items: center;
+        width: 85vw;
+        height: 70vw;
+        left: -3vw;
+        bottom: 6vw;
+        position: absolute;
+    }
+    .origin .img_container{
+        position: absolute;
+        margin-left: 8vw;
+    }
+    
+    .origin .title2{
+        position: absolute;
+        transform: translateY(75vw);
+        margin-left: 5vw;
+        margin-right: 3vw;
+        text-align: right;
+        padding: 10px;
+        width: 85vw;
+    }
+    .origin .title2 h1{
+        font-size: 9vw;
+        text-align: left;
+    }
+    .origin .title2 h1::after{
+        content: "";
+        align-items: center;
+        left: 10px;
+        bottom: 20px;
+        height: 3.3px;
+        border-radius: 2px;
+        width: 100px;
+        background-color: rgb(255, 96, 96);
+        position: absolute;
+    }
+    .origin .title2 p{
+        text-align: left;
+        font-size: 15px;
+        margin-top: 20px;
+    }
+
     /* Mission */
     .mission{
         height: 130vw;
@@ -1185,13 +1240,13 @@
         align-items: center;
         width: 85vw;
         height: 70vw;
-        left: -3vw;
-        bottom: 6vw;
+        left: 0.5vw;
+        bottom: 7vw;
         position: absolute;
     }
     .mission .img_container{
         position: absolute;
-        margin-left: 8vw;
+        margin-left: 4vw;
     }
     
     .mission .title2{
@@ -1219,61 +1274,6 @@
         position: absolute;
     }
     .mission .title2 p{
-        text-align: left;
-        font-size: 15px;
-        margin-top: 20px;
-    }
-
-    /* Vision */
-    .vision{
-        height: 130vw;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-    }
-    .vision img{
-        width: 85vw;
-        position: relative;
-    }
-    .vision .deco{
-        content: "";
-        align-items: center;
-        width: 85vw;
-        height: 70vw;
-        left: 0.5vw;
-        bottom: 7vw;
-        position: absolute;
-    }
-    .vision .img_container{
-        position: absolute;
-        margin-left: 4vw;
-    }
-    
-    .vision .title2{
-        position: absolute;
-        transform: translateY(75vw);
-        margin-left: 5vw;
-        margin-right: 3vw;
-        text-align: right;
-        padding: 10px;
-        width: 85vw;
-    }
-    .vision .title2 h1{
-        font-size: 9vw;
-        text-align: left;
-    }
-    .vision .title2 h1::after{
-        content: "";
-        align-items: center;
-        left: 10px;
-        bottom: 20px;
-        height: 3.3px;
-        border-radius: 2px;
-        width: 100px;
-        background-color: rgb(255, 96, 96);
-        position: absolute;
-    }
-    .vision .title2 p{
         text-align: left;
         font-size: 15px;
         margin-top: 20px;
@@ -1360,8 +1360,8 @@
         font-size: 12px;
     }
     
-    /* Mission */
-    .mission{
+    /* origin */
+    .origin{
         height: 120vw;
     }
 }
@@ -1485,24 +1485,26 @@
             <img src="Assets/Images/Aboutus.jpg" class="parallax1" alt="Study1">
             <div class="title">
                 <h1>About us</h1>
-                <p>Latibule of the Heart (LOTH)</p>
+                <p>LANG THANG </p>
             </div>
         </div>
 
-        <div class="mission reveal">
+        <div class="origin reveal">
             <div class="title2">
-                <h1>Sứ mệnh</h1>
-                <p>LOTH ra đời với sứ mệnh giúp các bạn trẻ phát triển kĩ năng sống và vận dụng các kiến thức đã được học một cách thiết thực hơn trong cuộc sống.</p>
+                <h1>Khởi nguồn và tính cần thiết</h1>
+                <p>Hiện nay, tỉ lệ đọc sách tại Việt Nam đang giảm mạnh; các nhóm người yếu thế không có cơ hội tiếp cận văn hóa đọc; không gian đọc vẫn còn hạn chế, nhất là trong các thư viện trường học; phần lớn giới trẻ không có thói quen đọc và kỹ năng đọc lành mạnh; mạng xã hội chiếm nhiều ưu thế, dẫn đến mất cân bằng giữa việc đọc sách giấy và đọc trên không gian mạng,...<br><br>Trước tình hình đó, LANG THANG đã ra đời nhằm mục đích mang tri thức và giá trị của văn hóa đọc đến với nhiều đối tượng hơn nữa, đặc biệt là nhóm người yếu thế. Đồng thời, chia sẻ các kỹ năng đọc, viết lách, kỹ năng sống... Từ đó, giáo dục và hoàn thiện các cá thể trong cộng đồng, phát triển và cân bằng văn hóa đọc, hướng tới mục tiêu giáo dục bền vững của Liên Hiệp Quốc.
+                    </p>
             </div>
             <div class="img_container">
                 <div class="deco"></div>
                 <img src="Assets/Images/Aboutus2.jpg" alt="Study2">
             </div>
         </div>
-        <div class="vision reveal">
+        <div class="mission reveal">
             <div class="title2">
-                <h1>Tầm nhìn</h1>
-                <p>Đến năm 2025, LOTH sẽ trở thành tổ chức giáo dục phi lợi nhuận được công nhận và đáng tin cậy tại Việt Nam.</p>
+                <h1>Sứ mệnh</h1>
+                <p>LANG THANG mang trên mình sứ mệnh phát triển và cân bằng văn hóa đọc ở các không gian khác nhau. Tạo lập hệ sinh thái để kết nối và cập nhật thông tin về những cá nhân và tập thể trong cùng lĩnh vực. Xây dựng, đổi mới và cải thiện các không gian đọc kém phát triển. Mang đến cho giới trẻ những kiến thức bổ ích về văn hóa đọc và văn chương. Đồng thời, LANG THANG cũng mong muốn cống hiến một phần nho nhỏ cho cộng đồng thông qua các công tác xã hội, các hoạt động thiện nguyện,..
+                </p>
             </div>
             <div class="img_container">
                 <div class="deco"></div>
@@ -1510,27 +1512,34 @@
             </div>
         </div>
         <div class="goal reveal">
-            <h1>Mục tiêu</h1>
+            <h1>Đối tượng</h1>
             <div class="goal_container">
                 <div class="sub_goal reveal2">
-                    <img src="Assets/Images/MoneyIcon.png" alt="Money">
-                    <h1>Tài chính</h1>
-                    <p>Các khoản tài chính từ nhà tài trợ và quỹ quyên góp được sử dụng hợp lý và hiệu quả để hỗ trợ dụng cụ và tư liệu cho các dự án của tổ chức.</p>
+                    <img src="Assets\Images\facility.png" alt="Money">
+                    <h1>FACILITY</h1>
+                    <p>Các cơ sở trường học, thư viện và các không gian đọc cần cải tạo và phát triển.
+                    </p>
                 </div>
                 <div class="sub_goal reveal2">
-                    <img src="Assets/Images/WorkshopIcon.png" alt="Workshop">
-                    <h1>Sản phẩm</h1>
-                    <p>LOTH tổ chức các dự án giáo dục như workshop - webinar; các chương trình dạy học tình nguyện và các bài viết về kĩ năng sống.</p>
+                    <img src="Assets/Images/non-members.png" alt="Workshop">
+                    <h1>NON-MEMBERS</h1>
+                    <p>Các đối tượng chưa đủ điều kiện để tham gia vào văn hóa đọc và hưởng thụ giáo dục bình đẳng
+                    </p>
                 </div>
                 <div class="sub_goal reveal2">
                     <img src="Assets/Images/TrustIcon.png" alt="Trust">
-                    <h1>Con người</h1>
-                    <p>Môi trường làm việc cởi mở và tôn trọng lẫn nhau; có cho bản thân những kiến thức, kinh nghiệm và trải nghiệm thú vị.</p>
+                    <h1>POTENTIALITY</h1>
+                    <p>Những "cây viết" tiềm năng, những cộng đồng văn chương và các dự án cùng lĩnh vực. </p>
                 </div>
                 <div class="sub_goal reveal2">
                     <img src="Assets/Images/StudentIcon.png" alt="Student">
-                    <h1>Thị trường</h1>
-                    <p>Không chỉ học sinh trong một độ tuổi nhất định mà tất cả học sinh ở từng cấp sẽ có các khóa học phù hợp và các kĩ năng sống rất thiết thực.</p>
+                    <h1>VETERANS</h1>
+                    <p>Những người đang trên hành trình phát triển văn hóa đọc nói chung và văn hóa đọc trên mạng xã hội nói riêng</p>
+                </div>
+                <div class="sub_goal reveal2">
+                    <img src="Assets/Images/WorkshopIcon.png" alt="Workshop">
+                    <h1>ENTHUSIASTS</h1>
+                    <p>Các bạn trẻ có niềm đam mê với văn chương, viết lách,...</p>
                 </div>
             </div>
             <div class="BtnContainer">
@@ -1564,7 +1573,7 @@
         <div class="team reveal">
             <img src="Assets/Images/Team.svg" alt="image">
             <div class="team_container">
-                <h1>Các phòng ban hiện có</h1>
+                <h1>ĐỐI TƯỢNG</h1>
                 <div class="sub_team">
                     <img src="Assets/Images/Team1.png" alt="Icon1" class="team_icon">
                     <h1>HR</h1>
