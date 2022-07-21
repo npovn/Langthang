@@ -2,7 +2,7 @@ title:              Blog
 email:              
 description:        Here are our posts
 author:             The itHelp Project
-baseurl:            "/Template-with-blog" #repo name 
+baseurl:            "/Langthang" #repo name 
 url:                "https://npovn.github.io" #o url ke ca khi su dung repository khac thi cung khong can them vao: vd: repo prohack17/chirach thi url van la "https://prohack17.github.io"
 
 # Build settings
