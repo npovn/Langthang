@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="icon" href="Assets/Images/LogoTrans.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script> 
+$(function(){
+  $("#header").load("headerTransparent.html"); 
+  $("#footer").load("footer.html"); 
+});
+</script> 
+<style>
+  @font-face {
+    font-family: Oswald;
+    src: url(Assets/Fonts/Oswald.ttf);
+  }
+  @font-face {
+    font-family: Briko;
+    src: url(Assets/Fonts/Briko.ttf);
+  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+	line-height: 1.5;
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  background: #ffffff;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #006E51;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.container {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #006E51;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -8px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #006E51;
+  z-index: 1;
+}
+
+.container.right::before {
+  left: 8px;
+}
+
+.container .date {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 13px);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #006E51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+  
+}
+
+.container.left .date {
+  right: -80px;
+}
+
+.container.right .date {
+  left: -89px;
+}
+
+.container .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: #F6D155;
+  border: 2px solid #006E51;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #006E51;
+  z-index: 1;
+}
+
+.container.left .icon {
+  right: 56px;
+}
+
+.container.right .icon {
+  left: 56px;
+}
+
+.container .content {
+  font-family: 'Oswald', sans-serif;
+  font-size:20px;
+  padding: 40px 90px 40px 30px;
+  background: #F6D155;
+  position: relative;
+  border-radius: 0 500px 500px 0;
+  text-align: justify;
+}
+
+.container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+.container.left .content{
+  padding: 60px 80px 50px 15px;
+}
+
+.container .content h2 {
+  font-family: Briko;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006E51;
+  font-weight: 10;
+}
+
+.container .content p {
+  font-family: Oswald;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3f3f3f;
+}
+
+.timeline .content p{
+  font-size: 20px;
+}
+
+.timeline .content h2{
+  font-size: 35px;
+}
+
+
+.title{
+  font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    margin-bottom: 80px;
+    margin-top: 7vw;
+}
+
+@media (min-width: 767.98px) {
+  .container.left {
+    left: 0;
+    padding-left: 0;
+  }
+
+  .container.right {
+    left: 50%;
+    padding-right: 0;
+  }
+  .container .date{
+    font-size: 20px;
+  }
+  .container.left .date {
+  right: -98px;
+}
+
+.container.right .date {
+  left: -114px;
+}
+}
+
+@media (max-width: 1200px){
+  .title{
+    margin-top: 11vw;
+  }
+}
+
+@media (max-width: 1000px){
+  .timeline .content p{
+    font-size: 1.5vw;
+  }
+
+  .timeline .content h2{
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .title{
+    margin-top: 15vw;
+  }
+  .timeline{
+    max-width: 1140px;
+  }
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 5px;
+  }
+
+  .container.right {
+    left: 0%;
+  }
+
+  .container.left::after, 
+  .container.right::after {
+    left: 82px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 100px;
+    border-color: transparent #006E51 transparent transparent;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    font-family: 'Oswald', sans-serif;
+    right: auto;
+    left: 5px;
+    font-size: 15px;
+  }
+
+  .container.left .icon,
+  .container.right .icon {
+    font-family: 'Oswald', sans-serif;
+    right: auto;
+    left: 146px;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    font-family: 'Oswald', sans-serif;
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
+  .container.container.left.big .content{
+    padding: 35px 30px 50px 100px;
+  }
+
+  .timeline .content p{
+  font-size: 2.5vw;
+}
+
+.timeline .content h2{
+  font-size: 4.4vw;
+}
+}
+
+@media (max-width: 640px){
+  .title{
+    margin-top: 29vw;
+  }
+}
+
+@media (max-width: 457px){
+  .container.container.left.big .content,
+  .container.container.right.big .content{
+    padding: 75px 20px 65px 90px;
+  }
+}
+</style>
+</head>
+<body>
+  <div id="header"></div>
+
+    <div class="title">
+        Các hoạt động dự kiến năm 2022
+    </div>
+    <div class="timeline">
+        <div class="container left">
+          <div class="date">Tháng 3</div>
+          <i class="icon fa fa-home"></i>
+          <div class="content">
+            <h2> Workshop về Thấu hiểu cảm xúc và khai thác tư duy học tập</h2>
+            <p>
+                Buổi Workshop “Thấu hiểu cảm xúc và khai thác tư duy học tập” nhằm giải quyết các khủng hoảng trong quá trình học tập.
+                Nhận thấy rằng tại môi trường học tập Việt Nam, việc phát triển tư duy mở (growth mindset) gặp nhiều bất cập và khó khăn. Vì thế, được nghe chia sẻ của những anh chị đi trước sẽ giúp các bạn tìm được cách tự mình giải quyết những vấn đề ấy bằng việc thấu hiểu bản thân cũng như thay đổi tư duy trong học tập.
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="date">Tháng 4-5</div>
+          <i class="icon fa fa-gift"></i>
+          <div class="content">
+            <h2>Gây quỹ học bổng và xin tài trợ cho hoạt động dạy học</h2>
+            <p>
+                Gây quỹ học bổng và xin tài trợ cho hoạt động dạy học. 
+            </p>
+          </div>
+        </div>
+        <div class="container left big">
+          <div class="date">Tháng 6</div>
+          <i class="icon fa fa-user"></i>
+          <div class="content">
+            <h2>Chương trình dạy học cho hơn 100 trẻ tại làng trẻ SOS </h2>
+            <p>
+                <strong>Đối tượng học viên </strong> <br> Đối tượng trung tâm tổ chức hướng đến là các trẻ em tại làng trẻ SOS. <br> Học viên là những cá nhân chưa được tiếp xúc nhiều với các chủ đề đa dạng và cần thiết trong cuộc sống như quyền trẻ em, tư duy sáng tạo,...
+                <br> <strong> Đối tượng giáo viên</strong><br> Đối tượng giáo viên bao gồm các bạn trẻ đam mê, có chuyên môn hoặc được đào tạo về lĩnh vực giảng dạy. <br> Những bạn trẻ cấp 3, đại học mong muốn đóng góp cho cộng đồng thuộc lĩnh vực học thuật chuyên môn.
+                <br> <strong>Nội dung dạy học chi tiết</strong> <br> Cấp 1: Trải nghiệm làm giấy từ giấy cũ đã qua sử dụng. <br> Cấp 2-3: Kĩ năng quản lý và phân bổ thời gian.
+            </p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="date">Tháng 7-8</div>
+          <i class="icon fa fa-running"></i>
+          <div class="content">
+            <h2>Workshop và triển lãm tranh</h2>
+            <p>
+                Sự kiện tổng kết chương trình dạy học tại làng trẻ SOS.
+                <br> Những sản phẩm của các bạn học sinh tại làng trẻ SOS sẽ được trưng bày tại buổi triển lãm.
+                <br> Buổi triển lãm được lồng ghép cùng một buổi workshop giáo dục truyền cảm hứng.
+            </p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="date">Tháng 9</div>
+          <i class="icon fa fa-cog"></i>
+          <div class="content">
+            <h2> Bootcamp giáo dục</h2>
+            <p>
+                Sự kiện mùa hè dành cho học sinh cấp 2 sắp chuyển cấp nhằm trải nghiệm những hoạt động giáo dục khai phóng như Mô phỏng Liên Hợp Quốc, tranh biện, hùng biện…
+                <br> Sự kiện được tổ chức tại một trường cấp 3 giúp các em trải nghiệm môi trường khi chuyển cấp.
+                <br> Các diễn giả là học sinh các lớp chuyên chia sẻ kinh nghiệm học tập.
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div id="footer"></div>
+
+</body>
+</html>
