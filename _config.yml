@@ -1,0 +1,15 @@
+title:              Blog
+email:              
+description:        Here are our posts
+author:             The itHelp Project
+baseurl:            "/Template-with-blog" #repo name 
+url:                "https://npovn.github.io" #o url ke ca khi su dung repository khac thi cung khong can them vao: vd: repo prohack17/chirach thi url van la "https://prohack17.github.io"
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site

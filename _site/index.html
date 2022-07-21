@@ -1,0 +1,305 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latibule of the Heart</title>
+    <link rel="icon" href="Assets/Images/LogoTrans.png">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </script>
+    <script> 
+        $(function(){
+        $("#header").load("headerTransparent.html"); 
+        $("#footer").load("footer.html"); 
+        });
+    </script> 
+    <style>
+        @font-face {
+    font-family: Iciel;
+    src: url(Assets/Fonts/Iciel.ttf);
+}
+
+@font-face {
+    font-family: Dekar;
+    src: url(Assets/Fonts/Dekar.ttf);
+}
+
+@font-face {
+    font-family: Hullist;
+    src: url(Assets/Fonts/Hullist.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    position: relative;
+    padding-bottom: 100px;
+    margin-bottom: 78vh;
+}
+
+.home{
+    width: 100vw; 
+    height: 100vh;
+    transform: translateZ(0);
+    overflow: hidden;
+    position: absolute;
+    background: linear-gradient(#F1A3D2, #ABD9EF);
+}
+
+.backgroundcover{
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), 
+    rgba(255, 143, 143, 0.4));
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.parallax{
+    position: fixed;
+    float: right;
+    margin: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Title */
+.title{
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(58, 28, 51);
+    margin-left: 20px;
+}
+
+@keyframes Header_Transition {
+    0%{
+        transform: translateY(40px);
+        color: transparent;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.title h1{
+    font-family: Dekar;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-weight: lighter;
+    display: inline-block;
+
+    animation: Header_Transition 0.6s ease-out;
+}
+
+.title h1.font1{
+    font-family: Dekar;
+    font-weight: bolder;
+    margin: 0 2.5vw;
+}
+
+@keyframes Description_Transition {
+    0%{
+        transform: translateY(60px);
+        color: transparent;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.title p{
+    font-family: Iciel;
+    margin: 0 2.5vw;
+    padding: 0;
+    font-weight: lighter;
+
+    animation: Description_Transition 1s ease-out;
+}
+
+b{
+    font-family: Hullist;
+    color: rgb(255, 100, 100);
+    font-size: 70px;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    font-weight: 600;
+}
+
+@keyframes Button_Transition {
+    0%{
+        transform: translateY(100px);
+        color: transparent;
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.title div a button{
+    color: rgb(2, 66, 8);
+    font-size: 1.5rem;
+    width: 190px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0 2.5vw;
+    padding: 0;
+    border: 3px solid rgb(255, 96, 96);
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    font-family: Iciel;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    animation: Button_Transition 1s ease-out;
+}
+/* Format span hiệu ứng của button */
+.BtnContainer button span{
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    background-color: rgb(255, 96, 96);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+.title div a button:hover{
+    border: transparent;
+    color: rgb(15, 15, 15);
+}
+
+.BtnContainer button:hover span{
+    width: 100%;
+    border: 3px solid rgb(255, 106, 106);
+}
+
+/* Khi media lớn như pc */
+@media screen and (min-width: 801px) {
+    .title h1{
+        font-size: 90px;
+    }
+    .title p{
+        font-size: 50px;
+        margin-bottom: 17px;
+    }
+    .BtnContainer{
+        display: flex;
+        justify-content: left;
+    }
+    .parallax{
+        position: absolute;
+        margin: 0;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -2;
+    }
+  }
+/* Chỉnh cỡ navbar cho phù hợp  */
+  @media screen and (max-width: 1080px) {
+    .title h1{
+        font-size: 50px;
+    }
+    .title p{
+        font-size: 35px;
+    }
+    .parallax{
+        right: -220px;
+    }
+  }
+
+/* Khi media nhỏ cỡ mobile */
+  @media screen and (max-width: 800px) {
+    .title h1{
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+    .title p{
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    .title b{
+        font-size: 42px;
+    }
+    .BtnContainer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .Logo{
+        width: 95px;
+        height: auto;
+    }
+  }
+  @media screen and (max-width: 550px){
+    .title h1{
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .title p{
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .title b{
+        font-size: 32px;
+    }
+    .title div a button{
+        width: 150px;
+        font-size: 20px;
+        margin-left: 1px;
+    }
+  }
+
+/* Format cái div content */
+.content{
+    transform: translateY(100vh);
+    min-height: 100vh;
+    z-index: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div id = "header"></div>
+    <div class="container">
+        <div class="home">
+            <div class="backgroundcover"></div>
+            <img src="Assets/Images/HomeBackground.jpg" class="parallax" alt="Background">
+            <div class="title">
+                <h1 class="font1">Latibule</h1><h1>of the heart</h1>
+                <p>Góc nhìn cởi mở hơn về <b>việc học</b></p>
+                <div class="BtnContainer">
+                    <a href="aboutus.html"><button><span></span>More</button></a>
+                    <a href="volunteer.html"><button><span></span>Join us</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id = "footer"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
