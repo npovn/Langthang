@@ -322,6 +322,23 @@ body{
     padding: 75px 20px 65px 90px;
   }
 }
+.flex-mother {
+  display: flex;
+}
+.flex-child {
+  flex: 1; 
+}
+.images {
+  width: 100%;
+  height: 500px;
+  display: absolute;
+
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 </head>
 <body>
@@ -331,68 +348,38 @@ body{
         Các hoạt động dự kiến năm 2022
     </div>
     <div class="timeline">
-        <div class="container left">
+      <div class="flex-mother">
+        <div class="flex-child container left">
           <div class="date">Tháng 3</div>
           <i class="icon fa fa-home"></i>
           <div class="content">
-            <h2> Workshop về Thấu hiểu cảm xúc và khai thác tư duy học tập</h2>
-            <p>
-                Buổi Workshop “Thấu hiểu cảm xúc và khai thác tư duy học tập” nhằm giải quyết các khủng hoảng trong quá trình học tập.
-                Nhận thấy rằng tại môi trường học tập Việt Nam, việc phát triển tư duy mở (growth mindset) gặp nhiều bất cập và khó khăn. Vì thế, được nghe chia sẻ của những anh chị đi trước sẽ giúp các bạn tìm được cách tự mình giải quyết những vấn đề ấy bằng việc thấu hiểu bản thân cũng như thay đổi tư duy trong học tập.
-            </p>
+            <h2> 📢TALKSHOW "SÁCH KHÔNG CHỈ LÀ SÁCH"📢</h2>
+            <zero-md src="/events/event1.md"></zero-md>
           </div>
         </div>
-        <div class="container right">
-          <div class="date">Tháng 4-5</div>
-          <i class="icon fa fa-gift"></i>
-          <div class="content">
-            <h2>Gây quỹ học bổng và xin tài trợ cho hoạt động dạy học</h2>
-            <p>
-                Gây quỹ học bổng và xin tài trợ cho hoạt động dạy học. 
-            </p>
-          </div>
+        <div class="flex-child image-container">
+          <img class="images" src="Assets/Images/Aboutus.jpg" alt="">
         </div>
-        <div class="container left big">
-          <div class="date">Tháng 6</div>
-          <i class="icon fa fa-user"></i>
-          <div class="content">
-            <h2>Chương trình dạy học cho hơn 100 trẻ tại làng trẻ SOS </h2>
-            <p>
-                <strong>Đối tượng học viên </strong> <br> Đối tượng trung tâm tổ chức hướng đến là các trẻ em tại làng trẻ SOS. <br> Học viên là những cá nhân chưa được tiếp xúc nhiều với các chủ đề đa dạng và cần thiết trong cuộc sống như quyền trẻ em, tư duy sáng tạo,...
-                <br> <strong> Đối tượng giáo viên</strong><br> Đối tượng giáo viên bao gồm các bạn trẻ đam mê, có chuyên môn hoặc được đào tạo về lĩnh vực giảng dạy. <br> Những bạn trẻ cấp 3, đại học mong muốn đóng góp cho cộng đồng thuộc lĩnh vực học thuật chuyên môn.
-                <br> <strong>Nội dung dạy học chi tiết</strong> <br> Cấp 1: Trải nghiệm làm giấy từ giấy cũ đã qua sử dụng. <br> Cấp 2-3: Kĩ năng quản lý và phân bổ thời gian.
-            </p>
-          </div>
-        </div>
-        <div class="container right">
-          <div class="date">Tháng 7-8</div>
-          <i class="icon fa fa-running"></i>
-          <div class="content">
-            <h2>Workshop và triển lãm tranh</h2>
-            <p>
-                Sự kiện tổng kết chương trình dạy học tại làng trẻ SOS.
-                <br> Những sản phẩm của các bạn học sinh tại làng trẻ SOS sẽ được trưng bày tại buổi triển lãm.
-                <br> Buổi triển lãm được lồng ghép cùng một buổi workshop giáo dục truyền cảm hứng.
-            </p>
-          </div>
-        </div>
-        <div class="container left">
+      </div>
+      <div class="flex-mother">
+        <div class="flex-child container left">
           <div class="date">Tháng 9</div>
           <i class="icon fa fa-cog"></i>
           <div class="content">
-            <h2> Bootcamp giáo dục</h2>
-            <p>
-                Sự kiện mùa hè dành cho học sinh cấp 2 sắp chuyển cấp nhằm trải nghiệm những hoạt động giáo dục khai phóng như Mô phỏng Liên Hợp Quốc, tranh biện, hùng biện…
-                <br> Sự kiện được tổ chức tại một trường cấp 3 giúp các em trải nghiệm môi trường khi chuyển cấp.
-                <br> Các diễn giả là học sinh các lớp chuyên chia sẻ kinh nghiệm học tập.
-            </p>
+            <h2 style="max-width:80% ;"> 🚫CẤP BÁO: MINI GAME LT 02 - BỨC THƯ GỬI CHÍNH MÌNH ĐÃ DIỄN RA🚫</h2>
+            <zero-md style="max-width:80% ;" src="/events/event2.md"></zero-md>
           </div>
-        </div>
+        </div> 
+        <div class="flex-child image-container">
+          <img class="images" src="Assets/Images/Aboutus.jpg" alt="">
         </div>
       </div>
+    </div>
 
 
       <div id="footer"></div>
-
+      <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+  
 </body>
 </html>
