@@ -16,24 +16,370 @@
 </script>
 <script> 
 $(function(){
-  $("#header").load("headerBlack.html"); 
+  $("#header").load("headerTransparent.html"); 
   $("#footer").load("footer.html"); 
 });
 </script> 
 <style>
-  #header {
-    margin-bottom: 120px;
+  @font-face {
+    font-family: Oswald;
+    src: url(Assets/Fonts/Oswald.ttf);
   }
-  #footer { 
-    position: absolute;     
-    bottom: 0;   
+  @font-face {
+    font-family: Briko;
+    src: url(Assets/Fonts/Briko.ttf);
+  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+	line-height: 1.5;
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  background: #ffffff;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #006E51;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.container {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #006E51;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -8px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #006E51;
+  z-index: 1;
+}
+
+.container.right::before {
+  left: 8px;
+}
+
+.container .date {
+  font-family: 'Oswald', sans-serif;
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 13px);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #006E51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+  
+}
+
+.container.left .date {
+  right: -80px;
+}
+
+.container.right .date {
+  left: -89px;
+}
+
+.container .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: #F6D155;
+  border: 2px solid #006E51;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #006E51;
+  z-index: 1;
+}
+
+.container.left .icon {
+  right: 56px;
+}
+
+.container.right .icon {
+  left: 56px;
+}
+
+.container .content {
+  font-family: 'Oswald', sans-serif;
+  font-size:20px;
+  padding: 40px 90px 40px 30px;
+  background: #F6D155;
+  position: relative;
+  border-radius: 0 500px 500px 0;
+  text-align: justify;
+}
+
+.container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+.container.left .content{
+  padding: 60px 80px 50px 15px;
+}
+
+.container .content h2 {
+  font-family: Briko;
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006E51;
+  font-weight: 10;
+}
+
+.container .content p {
+  font-family: Oswald;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3f3f3f;
+}
+
+.timeline .content p{
+  font-size: 20px;
+}
+
+.timeline .content h2{
+  font-size: 35px;
+}
+
+
+.title{
+  font-family: 'Oswald', sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    margin-bottom: 80px;
+    margin-top: 7vw;
+}
+
+@media (min-width: 767.98px) {
+  .container.left {
+    left: 0;
+    padding-left: 0;
+  }
+
+  .container.right {
+    left: 50%;
+    padding-right: 0;
+  }
+  .container .date{
+    font-size: 20px;
+  }
+  .container.left .date {
+  right: -98px;
+}
+
+.container.right .date {
+  left: -114px;
+}
+}
+
+@media (max-width: 1200px){
+  .title{
+    margin-top: 11vw;
+  }
+}
+
+@media (max-width: 1000px){
+  .timeline .content p{
+    font-size: 1.5vw;
+  }
+
+  .timeline .content h2{
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .title{
+    margin-top: 15vw;
+  }
+  .timeline{
+    max-width: 1140px;
+  }
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container {
     width: 100%;
+    padding-left: 120px;
+    padding-right: 5px;
   }
+
+  .container.right {
+    left: 0%;
+  }
+
+  .container.left::after, 
+  .container.right::after {
+    left: 82px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 100px;
+    border-color: transparent #006E51 transparent transparent;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    font-family: 'Oswald', sans-serif;
+    right: auto;
+    left: 5px;
+    font-size: 15px;
+  }
+
+  .container.left .icon,
+  .container.right .icon {
+    font-family: 'Oswald', sans-serif;
+    right: auto;
+    left: 146px;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    font-family: 'Oswald', sans-serif;
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
+  .container.container.left.big .content{
+    padding: 35px 30px 50px 100px;
+  }
+
+  .timeline .content p{
+  font-size: 2.5vw;
+}
+
+.timeline .content h2{
+  font-size: 4.4vw;
+}
+}
+
+@media (max-width: 640px){
+  .title{
+    margin-top: 29vw;
+  }
+}
+
+@media (max-width: 457px){
+  .container.container.left.big .content,
+  .container.container.right.big .content{
+    padding: 75px 20px 65px 90px;
+  }
+}
+.flex-mother {
+  display: flex;
+}
+.flex-child {
+  flex: 1; 
+}
+.images {
+  width: 100%;
+  height: 500px;
+  display: absolute;
+
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 </head>
 <body>
-<div id="header"></div>
-<div class="container"> </div>
-<div id="footer"></div>
+  <div id="header"></div>
+
+    <div class="title">
+        Các hoạt động dự kiến năm 2022
+    </div>
+    <div class="timeline">
+      <div class="flex-mother">
+        <div class="flex-child container left">
+          <div class="date">Tháng 3</div>
+          <i class="icon fa fa-home"></i>
+          <div class="content">
+            <h2> 📢TALKSHOW "SÁCH KHÔNG CHỈ LÀ SÁCH"📢</h2>
+            <zero-md src="/events/event1.md"></zero-md>
+          </div>
+        </div>
+        <div class="flex-child image-container">
+          <img class="images" src="Assets/Images/Aboutus.jpg" alt="">
+        </div>
+      </div>
+      <div class="flex-mother">
+        <div class="flex-child container left">
+          <div class="date">Tháng 9</div>
+          <i class="icon fa fa-cog"></i>
+          <div class="content">
+            <h2 style="max-width:80% ;"> 🚫CẤP BÁO: MINI GAME LT 02 - BỨC THƯ GỬI CHÍNH MÌNH ĐÃ DIỄN RA🚫</h2>
+            <zero-md style="max-width:80% ;" src="/events/event2.md"></zero-md>
+          </div>
+        </div> 
+        <div class="flex-child image-container">
+          <img class="images" src="Assets/Images/Aboutus.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+
+      <div id="footer"></div>
+      <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+  
 </body>
 </html>
