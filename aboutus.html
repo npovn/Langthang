@@ -155,34 +155,18 @@
 
 .title div a button:hover{
     border: transparent;
-    color: rgb(15, 15, 15)
+    color: rgb(15, 15, 15);
 }
 
 .title2{
     color: rgb(73, 66, 66);
 }
-/* origin */
+/* Origin */
 .origin{
     height: 70vh;
     position: relative;
     display: flex;
     flex-direction: row;
-}
-
-.origin::after{
-    content: "";
-    align-items: center;
-    left: 0;
-    bottom: -70px;
-    height: 3px;
-    border-radius: 2px;
-    width: 35vw;
-
-    /* (100 - width)/2 */
-    transform: translateX(32.5vw);
-
-    background-color: rgba(69, 65, 65, 0.2);
-    position: absolute;
 }
 
 .origin img{
@@ -208,7 +192,7 @@
 
 .origin .title2{
     position: absolute;
-    transform: translateY(0vh);
+    transform: translateY(15vh);
     margin-left: 3vw;
     margin-right: 3vw;
     text-align: right;
@@ -244,23 +228,7 @@
 .mission{
     height: 70vh;
     position: relative;
-    margin-top: 100px;
-}
-
-.mission::after{
-    content: "";
-    align-items: center;
-    left: 0;
-    bottom: -70px;
-    height: 3px;
-    border-radius: 2px;
-    width: 35vw;
-
-    /* (100 - width)/2 */
-    transform: translateX(32.5vw);
-
-    background-color: rgba(69, 65, 65, 0.2);
-    position: absolute;
+    margin-top: 350px;
 }
 
 .mission img{
@@ -286,7 +254,7 @@
 
 .mission .title2{
     position: relative;
-    transform: translateY(10vh);
+    transform: translateY(23vh);
     margin-right: 3vw;
     margin-left: 45vw;
     text-align: left;
@@ -333,7 +301,6 @@
 .goal{
     height: auto;
     margin-top: 180px;
-    margin-bottom: 500px;
     position: relative;
 }
 
@@ -375,13 +342,13 @@
     height: 3.8px;
     border-radius: 2px;
     width: 150px;
-    background-color: rgb(130, 0, 0);
+    background-color: rgb(255, 96, 96);
     position: absolute;
     transform: translateX(-190px);
 }
 
 .sub_goal img{
-    width: 70px;
+    width: 130px;
     transition:  0.35s all ease-in-out;
 }
 
@@ -389,7 +356,7 @@
     display: none;
     font-family: Spectral;
     position: relative;
-    width: 15vw;
+    width: 20vw;
     text-align: justify;
     opacity: 0;
     color: white;
@@ -409,8 +376,8 @@
 
 .sub_goal {
     /* Width của p */
-    width: 15vw;
-    height: 300px;
+    width: 20vw;
+    height: 250px;
 
     padding: 1vw;
     display: flex;
@@ -497,7 +464,7 @@
 
 .goal a button:hover{
     border: transparent;
-    color: rgb(255, 255, 255);
+    color: rgb(15, 15, 15);
 }
 
 .BtnContainer button:hover span{
@@ -783,7 +750,7 @@
     }
     .title p{
         font-size: 28px;
-        margin-bottom: 17px;
+        margin-bottom: 15px;
     }
 
     .parallax1{
@@ -993,6 +960,7 @@
     /* Goal */
     .goal{
         height: 225vh;
+        margin-top: 250px;
     }
     .goal_container{
         flex-direction: column;
@@ -1065,7 +1033,7 @@
         transform: translateX(-230px);
     }
 
-    /* origin */
+    /* Mission */
     .origin{
         height: 35vw;
     }
@@ -1092,9 +1060,10 @@
         font-size: 15px;
     }
 
-    /* Mission */
+    /* Vision */
     .mission{
         height: 50vw;
+        margin-top: 500px;
     }
     .mission .img_container{
         margin-left: 5vw;
@@ -1170,13 +1139,13 @@
 }
 
 @media screen and (max-width: 555px){
-    /* origin */
+    /* Mission */
     .origin{
         height: 130vw;
         position: relative;
         display: flex;
         flex-direction: row;
-    }f
+    }
     .origin img{
         width: 85vw;
         position: relative;
@@ -1225,7 +1194,7 @@
         margin-top: 20px;
     }
 
-    /* Mission */
+    /* Vision */
     .mission{
         height: 130vw;
         position: relative;
@@ -1361,7 +1330,7 @@
         font-size: 12px;
     }
     
-    /* origin */
+    /* Mission */
     .origin{
         height: 120vw;
     }
