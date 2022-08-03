@@ -143,7 +143,6 @@ body{
 }
 /* origin */
 .origin{
-    height: 70vh;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -151,8 +150,7 @@ body{
 .origin::after{
     content: "";
     align-items: center;
-    left: 0;
-    bottom: -110px;
+    bottom: -30px;
     height: 3px;
     border-radius: 2px;
     width: 35vw;
@@ -186,18 +184,12 @@ body{
 }
 
 .origin .title2{
-    position: absolute;	    
-    transform: translateY(0vh);
+    position: relative;
     margin-left: 3vw;
     margin-right: 3vw;
     text-align: right;
     padding: 10px;
     width: 50.5vw;
-}
-.origin .title2 p{	
-    position: absolute;	
-    margin-top: 20px;	
-    font-family: Vollkorn;	
 }
 
 .origin .title2 h1{
@@ -209,7 +201,7 @@ body{
     float: right;
     height: 3.3px;
     border-radius: 2px;
-    width: 350px;
+    width: 100px;
     background-color: rgb(255, 96, 96);
 }
 
@@ -221,15 +213,16 @@ body{
 
 /* Mission */
 .mission{
-    height: 70vh;
     position: relative;
+    display: flex;
+    flex-direction: row;
     margin-top: 100px;
 }
+
 .mission::after{
     content: "";
     align-items: center;
-    left: 0;
-    bottom: -70px;
+    bottom: -30px;
     height: 3px;
     border-radius: 2px;
     width: 35vw;
@@ -240,6 +233,7 @@ body{
     background-color: rgba(69, 65, 65, 0.2);
     position: absolute;
 }
+
 .mission img{
     width: 29.8vw;
     position: relative;
@@ -263,7 +257,6 @@ body{
 
 .mission .title2{
     position: relative;
-    transform: translateY(10vh);
     margin-right: 3vw;
     margin-left: 45vw;
     text-align: left;
@@ -272,8 +265,8 @@ body{
 }
 
 .mission .title2 p{
-    position: absolute;
-    margin-top: 30px;
+    position: relative;
+    margin-top: 20px;
     font-family: Vollkorn;
 }
 
@@ -304,15 +297,14 @@ body{
 /* Goal */
 .goal{
     height: auto;
-    margin-top: 150px;
-    margin-bottom: 200px;
+    margin-top: 100px;
     position: relative;
 }
+
 .goal::after{
     content: "";
     align-items: center;
-    left: 0;
-    bottom: -120px;
+    bottom: -30px;
     height: 3px;
     border-radius: 2px;
     width: 35vw;
@@ -323,6 +315,7 @@ body{
     background-color: rgba(69, 65, 65, 0.2);
     position: absolute;
 }
+
 .goal h1{
     color: rgb(73, 66, 66);
 }
@@ -344,10 +337,10 @@ body{
     top: 90px;
     height: 3.8px;
     border-radius: 2px;
-    width: 150px;
+    width: 300px;
     background-color: rgb(255, 96, 96);
     position: absolute;
-    transform: translateX(-190px);
+    transform: translateX(-290px);
 }
 
 .sub_goal img{
@@ -429,7 +422,7 @@ body{
 /* Team */
 .team{
     height: 1000px;
-    margin-top: 180px;
+    margin-top: 100px;
     margin-bottom: 500px;
 }
 
@@ -444,7 +437,7 @@ body{
 .team > h1{
     font-family: Iciel;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     text-transform: uppercase;
 }
 
@@ -460,12 +453,6 @@ body{
     transform: translateX(-340px);
 }
 
-.team > img{
-    height: 23vw;
-    margin-right: 100px;
-    margin-left: 100px;
-}
-
 .team_container{
     position: relative;
     left: -30px;
@@ -475,9 +462,9 @@ body{
     display: inline-block;
     font-family: Iciel;
     text-transform: uppercase;
-    margin-bottom: 57px;
+    margin-bottom: 50px;
     position: relative;
-    left: 300px;
+    left: 400px;
 }
 
 .team_container > h1::after{
@@ -487,28 +474,8 @@ body{
     left: 0;
     height: 3.8px;
     border-radius: 2px;
-    width: 150px;
+    width: 200px;
     background-color: rgb(255, 96, 96);
-    position: absolute;
-}
-.team .deco1{
-    content: "";
-    align-items: center;
-    width: 30vw;
-    height: 29vw;
-    left: 100px;
-    bottom: 900px;
-    background: linear-gradient(rgb(255, 96, 96), rgb(191, 134, 195));
-    position: absolute;
-}
-.team .deco2{
-    content: "";
-    align-items: center;
-    width: 31vw;
-    height: 37.5vw;
-    left: 80px;
-    bottom: 84px;
-    background: linear-gradient(rgb(255, 96, 96), rgb(191, 134, 195));
     position: absolute;
 }
 
@@ -517,13 +484,38 @@ body{
     flex-direction: row;
     align-items: center;
     align-content: center;
-    margin: 15px 0;
+    margin: 50px 0;
     cursor: default;
+}
+
+.sub_team .img_container{
+    position: relative;
+}
+
+.sub_team .deco1{
+    content: "";
+    align-items: center;
+    width: 31vw;
+    height: 29vw;
+    position: absolute;
+    left: 125px;
+    top: -15px;
+    background: linear-gradient(rgb(255, 96, 96), rgb(191, 134, 195));
+}
+.sub_team .deco2{
+    content: "";
+    align-items: center;
+    width: 30vw;
+    height: 35vw;
+    position: absolute;
+    left: 125px;
+    top: -15px;
+    background: linear-gradient(rgb(255, 96, 96), rgb(191, 134, 195));
 }
 
 .sub_team h1{
     width: 5vw;
-    margin-left: 170px;
+    margin-left: 150px;
     margin-right: 15px;
     text-align: left;
     font-family: Napoli;
@@ -553,15 +545,10 @@ body{
     width: 3.4vw;
 }
 
-.sub_team p{
-    font-family: Roboto;
-}
-
 .sub_team img{
     width: 32vw;
     left: 140px;
     position: relative;
-    margin-bottom: 50px;
 }
 
 .sub_team p{
@@ -570,12 +557,13 @@ body{
     transition: .35s all ease-in-out;
     z-index: -1;
     padding: 10px;
-    border-style:inset;
+    border-style: inset;
+    border-width: 5px;
     color: aliceblue;
     background-color: rgb(63, 63, 63);
     padding: 20px;
     font-family: Iciel;
-    border-width: 5px;
+    text-align: justify;
 }
 
 .sub_team:hover p{
@@ -625,7 +613,7 @@ body{
         font-size: 40px;
     }
     .team_container p{
-        font-size: 25px;
+        font-size: 22px;
     }
 }
 
@@ -635,44 +623,31 @@ body{
     }
   }
   @media screen and (max-width: 1400px) {
-    .origin .title2 h1{
-        font-size: 50px;
-    }
-    .mission .title2 h1{
-        font-size: 50px;
-    }
     .origin .title2 p{
-        font-size: 20px;
+        font-size: 22px;
     }
     .mission .title2 p{
-        font-size: 20px;
+        font-size: 22px;
     }
-    .team_container h1{
-        font-size: 28px;
-    }
-    .team_container p{
-        font-size: 14.5px;
-    }
-    .sub_team h1{
-        margin-right: 15px;
-        margin-left: 100px;
+    .team_container > h1{
+        font-size: 36px;
     }
   }
   @media screen and (max-width: 1350px) {
-    .origin .title2 h1{
-        font-size: 50px;
-    }
-    .mission .title2 h1{
-        font-size: 50px;
-    }
     .origin .title2 p{
         font-size: 18px;
     }
     .mission .title2 p{
         font-size: 18px;
     }
+    .mission .title2{
+        height: 65vh;
+    }
     .sub_goal{
         height: 260px;
+    }
+    .sub_goal h1{
+        font-size: 26px;
     }
     .sub_goal p{
         font-size: 13.5px;
@@ -697,7 +672,18 @@ body{
         right: 60px;
         bottom: 30px;
     }
-  }
+    .team_container > h1{
+        margin-bottom: 25px;
+    }   
+    .team_container > h1::after{
+        height: 1.9px;
+        width: 150px;
+        bottom: -5px;
+    }
+    .sub_team{
+        margin: 25px;
+    }
+  }  
   @media screen and (max-width: 1008px) {
     .origin .title2 p{
         font-size: 18px;
@@ -720,9 +706,23 @@ body{
     .mission .title2  h1{
         font-size: 40px;
     }
+    .goal > h1{
+        font-size: 40px;
+    }
+    .goal > h1::after{
+        top: 70px;
+        transform: translateX(-250px);
+    }
 
     .team{
         height: 90vw;
+    }
+    .team > h1{
+        font-size: 40px;
+    }
+    .team > h1::after{
+        top: 70px;
+        transform: translateX(-300px);
     }
     .team_container{
         left: -50px;
@@ -737,14 +737,17 @@ body{
         height: 2.6px;
         border-radius: 1px;
     }
-    .sub_team h1::after{
-        width: 4.1vw;
-    }    
-    .sub_team:hover h1::after{
-        width: 4.1vw;
-    } 
+    .sub_team .deco1{
+        width: 25vw;
+        height: 22vw;
+    }
+    .sub_team .deco2{
+        width: 22vw;
+        height: 25vw;
+    }
     .team img{
         height: 25vw;
+        width: auto;
     }
   }
 
@@ -775,16 +778,13 @@ body{
     .origin .title2{
         width: 40vw;
     }
-    .origin .title2 h1{
-        font-size: 40px;
-    }
     .origin .title2 p{
         font-size: 15px;
     }
     
     /* Mission */
     .mission{
-        margin-top: 40px;
+        margin-top: 70px;
     }
     .mission .img_container{
         margin-left: 5vw;
@@ -803,9 +803,6 @@ body{
         width: 40vw;
         margin-left: 50vw;
     }
-    .mission .title2 h1{
-        font-size: 40px;
-    }
     .mission .title2 p{
         font-size: 15px;
     }
@@ -823,14 +820,14 @@ body{
     }
     .sub_goal p{
         width: 52vw;
-        font-size: 2.3vw;
+        font-size: 18px;
     }
     .sub_goal h1{
         width: 52vw;
         font-size: 28px;
     }
     .goal > h1{
-        font-size: 50px;
+        font-size: 40px;
         margin-bottom: 50px;
     }
     .goal a button:hover{
@@ -863,7 +860,7 @@ body{
         margin-top: 40px;
     }
     .team > h1 {
-        font-size: 50px;
+        font-size: 40px;
         margin-bottom: 20px;
     }
     .team_container{
@@ -881,10 +878,25 @@ body{
         display: none;
     }
     .sub_team img{
+        left: 10px;
+        height: 50vw;
+        width: auto;
+    }
+    .sub_team .deco1{
+        width: 45vw;
+        height: 45vw;
         left: 0;
+        top: -10px;
+    }
+    .sub_team .deco2{
+        width: 40vw;
+        height: 45vw;
+        left: 0;
+        top: -10px;
     }
     .sub_team > p{
         margin-top: 20px;
+        font-size: 16px;
     }
 }
 
@@ -895,7 +907,7 @@ body{
     }
 }
 
-@media screen and (max-width: 555px){
+@media screen and (max-width: 660px){
     /* origin */
     .origin{
         flex-direction: column-reverse;
@@ -924,19 +936,22 @@ body{
         width: 85vw;
     }
     .origin .title2 h1{
-        font-size: 9vw;
+        font-size: 50px;
     }
     .origin .title2 .line{
         float: left;
     }
     .origin .title2 p{
         text-align: left;
-        font-size: 15px;
+        font-size: 18px;
     }
 
     /* Mission */
     .mission{
         flex-direction: column-reverse;
+    }
+    .mission .title2{
+        height: auto;
     }
     .mission img{
         width: 85vw;
@@ -962,34 +977,34 @@ body{
         width: 85vw;
     }
     .mission .title2 h1{
-        font-size: 9vw;
+        font-size: 50px;
     }
     .mission .title2 .line{
         float: left;
     }
     .mission .title2 p{
         text-align: left;
-        font-size: 15px;
+        font-size: 18px;
     }
 
     /* Goal */
     .sub_goal{
-        width: 95vw;
-        
+        width: 80vw;
     }
     .sub_goal p{
-        width: 80vw;
-        font-size: 3.6vw;
+        width: 70vw;
+        font-size: 16px;
     }
     .sub_goal h1{
-        width: 52vw;
-        font-size: 28px;
+        width: 70vw;
+        font-size: 20px;
     }
     .goal > h1{
-        font-size: 40px;
+        font-size: 50px;
     }
     .goal > h1::after{
-        transform: translateX(-160px);
+        top: 90px;
+        transform: translateX(-285px);
     }
     /* Team */
     .team{
@@ -998,24 +1013,36 @@ body{
     .team > h1 {
         font-size: 50px;
     }
+    .team > h1::after{
+        top: 90px;
+        transform: translateX(-330px);
+    }
     .team_container > h1{
         font-size: 7vw;
     }
     .sub_team h1{
         font-size: 5vw;
     }
-    .sub_team p{
-        font-size: 16px;
+    .sub_team img{
+        left: 10px;
+        height: 65vw;
+        width: auto;
+    }
+    .sub_team .deco1{
+        width: 60vw;
+        height: 60vw;
+        left: 0;
+        top: -10px;
+    }
+    .sub_team .deco2{
+        width: 55vw;
+        height: 60vw;
+        left: 0;
+        top: -10px;
     }
 }
 
-@media (max-width: 365px){
-    .team{
-        height: 155vw;
-    }
-}
-
-@media screen and (max-width: 436px){
+@media screen and (max-width: 450px){
     .title h1{
         font-size: 100px;
     }
@@ -1024,36 +1051,35 @@ body{
         margin-bottom: 25px;
     }
 
-    /* Team */
-    .team > img{
-        margin-left: 50px;
+    .origin .title2 h1{
+        font-size: 40px;
     }
-}
+    .mission .title2 h1{
+        font-size: 40px;
+    }
 
-@media screen and (max-width: 352px){
-    /* Team */
-    .sub_team p{
-        font-size: 12px;
-    }
-    
-    /* origin */
-    .origin{
-        height: 120vw;
-    }
-}
-
-@media screen and (max-width: 353px){
-    .goal{
-        height: 225vh;
-    }
-    .team > img{
-        margin-left: 50px;
-    }
-    .goal > h1{
-        font-size: 38px;
+    .goal > h1 {
+        font-size: 40px;
     }
     .goal > h1::after{
-        transform: translateX(-153px);
+        top: 70px;
+        width: 150px;
+        transform: translateX(-180px);
+    }
+
+    .team > h1 {
+        font-size: 40px;
+    }
+    .team > h1::after{
+        top: 70px;
+        width: 150px;
+        transform: translateX(-220px);
+    }
+}
+
+@media screen and (max-width: 400px){
+    .sub_team p{
+        font-size: 14px;
     }
 }
 
@@ -1135,16 +1161,20 @@ body{
             <div class="team_container">
                 <h1>FOUNDER</h1>
                 <div class="sub_team">
-                    <div class="deco1"></div>
-                    <img src="Assets/Images/founder.jpg" alt="Icon1" class="team_icon">
+                    <div class="img_container">
+                        <div class="deco1"></div>
+                        <img src="Assets/Images/founder.jpg" alt="Icon1" class="team_icon">
+                    </div>
                     <h1>INFO</h1>
                     <p>- Họ và tên: Nguyễn Hữu Phước<br>- Ngày, tháng, năm sinh: 07/02/2002<br>"Dự án Lang Thang là một cột mốc đánh dấu sự trưởng thành trong cả nhận thức và sự nghiệp của mình. Có thể Lang Thang chỉ là một chút nhỏ nhoi trong vô số các dự án lớn lao khác, nhưng mình mong rằng chúng mình có thể đóng góp cho văn hóa đọc nói riêng, ngành công nghiệp văn hóa nói chung, hay to lớn hơn nữa là đóng góp cho sự phát triển của cả đất nước Việt Nam.<br>Một điều nho nhỏ nữa mình muốn chia sẻ cùng mọi người. Mong rằng, các bạn hãy đến với Lang Thang hay bất cứ dự án nào thì hãy đến vì giá trị mà nơi đó mang lại, vì tinh thần cống hiến, học hỏi và phát triển bản thân chứ không phải vì chạy theo thành tích hào nhoáng. Bản thân mình cũng đi lên từ con số không. Mình đã làm được, và mình tin bạn cũng làm được nếu bạn cố gắng. Hẹn gặp nhau tại Lang Thang nhé!"
                         </p>
                 </div>
                 <h1>CO-FOUNDER</h1>
                 <div class="sub_team">
-                    <div class="deco2"></div>
-                    <img src="Assets/Images/co-founder.jpeg" alt="Icon2" class="team_icon">
+                    <div class="img_container">
+                        <div class="deco2"></div>
+                        <img src="Assets/Images/co-founder.jpeg" alt="Icon2" class="team_icon">
+                    </div>
                     <h1>INFO</h1>
                     <p>- Họ và tên: Phạm An Khanh<br>- Ngày, tháng, năm sinh: 05/05/2006<br>“LANG THANG 2022 với mình chính là một cột mốc của sự trưởng thành, nơi mình có thể đứng lên tự tin là một Teen Leader, một người điều hành dự án.<br>Giữa thời đại 4.0 nơi công nghệ lên ngôi, những giá trị ẩn dấu trong những trang sách lại bị con người ta dễ dàng lãng quên thì sự ra đời của LANG THANG 2022 là vô cùng cấp thiết để có thể đem văn hóa đọc đến với các bạn trẻ. Chúng mình mong muốn, thông qua dự án, các bạn trẻ có thể trang bị cho mình những hành trang, kiến thức về sách và văn hóa đọc để bảo tồn, duy trì tinh thần hiếu học của dân tộc ta.<br>Hãy cùng LANG THANG 2022 du ngoạn trên chuyến hành trình sắp tới nhé!”   
                         </p>
